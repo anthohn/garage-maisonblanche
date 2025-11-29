@@ -8,12 +8,21 @@ export default function Footer() {
                     <div className="section-content">
                         <div className="row">
                             <div className="col-md-4">
-                                <h2>Gararge Maison-Blanche</h2>
+                                <h2>Gararge Maison-Blanche SA</h2>
                                 <p>Jean-Fran&ccedil;ois H&ouml;hn<br />
                                     500, Route de Chancy<br />1284 Chancy</p>
-                                <p><a href="mailto:jfhohn@bluewin.ch">jfhohn@bluewin.ch</a></p>
-                                <div id="map" className="map-small"></div>
-                                {/* Map script will need to be handled separately or via a library */}
+                                <p><a href="mailto:contact@garage-maisonblanche.ch">contact@garage-maisonblanche.ch</a></p>
+                                <div id="map" className="map-small">
+                                    <iframe
+                                        width="100%"
+                                        height="100%"
+                                        frameBorder="0"
+                                        scrolling="no"
+                                        marginHeight={0}
+                                        marginWidth={0}
+                                        src="https://maps.google.com/maps?q=Garage+Maison-Blanche+500+Route+de+Chancy+1284+Chancy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    ></iframe>
+                                </div>
                             </div>
 
                             <div className="col-md-4">
@@ -31,7 +40,7 @@ export default function Footer() {
                                         <p>T&eacute;l.&nbsp;&nbsp;<a href="tel:+41227560404">+41 22 756 04 04</a><br />Fax&nbsp;&nbsp;+41 22 756 15 58</p>
                                     </div>
                                     <div className="col-xs-6 text-right">
-                                        <p><a href="mailto:garage.maisonblanche@bluewin.ch">garage.maisonblanche<br />@bluewin.ch</a></p>
+                                        <p><a href="mailto:contact@garage-maisonblanche.ch">contact@garage-maisonblanche.ch</a></p>
                                     </div>
                                 </div>
                                 <div style={{ marginTop: '20px', marginBottom: '5px', fontSize: '14px', fontWeight: '600 !important' } as any}>Le Lavage<hr style={{ margin: '0px' }} /></div>
@@ -72,7 +81,7 @@ export default function Footer() {
                                         <p>T&eacute;l.&nbsp;&nbsp;<a href="tel:+41227561522">+41 22 756 15 22</a></p>
                                     </div>
                                     <div className="col-xs-6 text-right">
-                                        <p><a href="mailto:stationservice.maisonblanche@bluewin.ch">stationservice.maisonblanche<br />@bluewin.ch</a></p>
+                                        <p><a href="mailto:contact@station-maisonblanche.ch">contact@station-maisonblanche.ch</a></p>
                                     </div>
                                 </div>
                             </div>
