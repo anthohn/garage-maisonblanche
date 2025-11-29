@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import HomeScripts from '@/components/HomeScripts';
+
+export const metadata: Metadata = {
+    title: "Le Lavage | Garage Maison-Blanche",
+    description: "Installation de lavage ouverte 7/7 jours de 6h00 à 22h00. Haute pression, aspirateur et produits d'entretien.",
+};
 
 export default function Lavage() {
     return (

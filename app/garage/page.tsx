@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import HomeScripts from '@/components/HomeScripts';
+
+export const metadata: Metadata = {
+    title: "L'Atelier mécanique | Garage Maison-Blanche",
+    description: "Réparation et maintenance toutes marques. Membre du réseau carXpert. Véhicule de prêt.",
+};
 
 export default function Garage() {
     return (

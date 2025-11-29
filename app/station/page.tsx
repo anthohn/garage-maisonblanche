@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import HomeScripts from '@/components/HomeScripts';
+
+export const metadata: Metadata = {
+    title: "La Station-Service | Garage Maison-Blanche",
+    description: "Faire le plein de carburant 7/7 jours - 24/24 heures. Carburants Shell V-Power 100, Diesel et Sans Plomb 95.",
+};
 
 export default function Station() {
     return (

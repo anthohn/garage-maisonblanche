@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://garage-maisonblanche.ch"),
   title: "Garage Maison-Blanche Chancy | Accueil",
   description: "Votre garage membre du réseau carXpert pour la réparation et l'entretien de voitures neuves et d'occasions. Station service, piste de lavage et Shop 7/7.",
   keywords: "garage,réparation,entretien,automobile,voiture,station service,station essence,shop,kiosk,lavage de voiture,carwash,geneve,chancy",

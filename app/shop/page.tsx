@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import HomeScripts from '@/components/HomeScripts';
+
+export const metadata: Metadata = {
+    title: "Le Shop | Garage Maison-Blanche",
+    description: "Ouvert 7/7 jours. Boissons, Snacks, Tabac, Alimentaires, Produits frais et surgelés. Kiosque complet.",
+};
 
 export default function Shop() {
     return (
