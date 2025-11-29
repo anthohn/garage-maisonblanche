@@ -1,73 +1,110 @@
 import Link from 'next/link';
 import PartnerCarousel from '@/components/PartnerCarousel';
-import HomeScripts from '@/components/HomeScripts';
 
 export default function Home() {
   return (
-    <main>
-      <HomeScripts />
-      <div className="jumbotron text-center" style={{ backgroundImage: 'url(/img/front3.jpg)' }}>
-        <h1><span className="text-bg-colored text-uppercase font-opensans font-weight-600">Garage Maison-Blanche</span></h1>
-        <p style={{ paddingTop: '10px' }}><span className="text-bg-white">Jean-Fran&ccedil;ois H&ouml;hn</span><br />
-          R&Eacute;PARATION ET MAINTENANCE TOUTES MARQUES</p>
+    <main className="pt-20"> {/* Add padding-top to account for fixed navbar */}
+
+      {/* Hero Section */}
+      <div className="relative h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/img/front3.jpg)' }}>
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-wider mb-4">
+            <span className="bg-blue-900 px-4 py-2 inline-block">Garage Maison-Blanche</span>
+          </h1>
+          <p className="text-xl md:text-2xl font-light mt-6">
+            <span className="bg-white text-gray-900 px-2 py-1 font-medium">Jean-François Höhn</span>
+            <br className="my-2" />
+            <span className="block mt-4 font-semibold tracking-wide">RÉPARATION ET MAINTENANCE TOUTES MARQUES</span>
+          </p>
+        </div>
       </div>
 
-      {/* Container (About Section) */}
-      <section id="titletop">
-        <div className="container text-center">
-          <div className="section-content">
+      {/* About Section */}
+      <section id="titletop" className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-semibold text-gray-800 uppercase mb-4">Bienvenue</h2>
+            <div className="w-24 h-1 bg-blue-900 mx-auto mb-8"></div>
+            <h4 className="text-xl text-gray-600 leading-relaxed font-light">
+              Nous sommes à votre service pour la réparation et la maintenance<br className="hidden md:block" />
+              de votre voiture quelle que soit sa marque ou son modèle.
+            </h4>
+          </div>
+        </div>
+      </section>
 
-            <div className="row">
-              <div className="col-md-12">
-                <h2 className="title-top">Bienvenue</h2><hr className="hr-title-top" />
-                <h4>Nous sommes &agrave; votre service pour la r&eacute;paration et la maintenance<br />de votre voiture quelle que soit sa marque ou son model</h4>
-              </div>
+      {/* Services Section */}
+      <section id="box-list" className="py-16 bg-gray-100 bg-no-repeat bg-right-bottom" style={{ backgroundImage: 'url("/img/bg2.png")' }}>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+            {/* Station */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+              <Link href="/station" className="inline-block mb-6">
+                <i className="flaticon-refuel text-5xl text-blue-900 group-hover:scale-110 transition-transform duration-300 block"></i>
+              </Link>
+              <h2 className="text-2xl font-bold text-gray-800 uppercase mb-4">LA STATION-SERVICE</h2>
+              <div className="w-12 h-1 bg-gray-200 mx-auto mb-6 group-hover:bg-blue-900 transition-colors"></div>
+              <p className="text-gray-600 mb-6">
+                Vous pouvez y effectuer le plein de carburant 7/7 jours - 24/24 heures avec paiement par carte ou cash en CHF ou Euro.
+              </p>
+              <Link href="/station" className="text-blue-900 font-semibold hover:text-blue-700 hover:underline">
+                plus de détail →
+              </Link>
+            </div>
+
+            {/* Atelier */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+              <Link href="/garage" className="inline-block mb-6">
+                <i className="flaticon-car-repair-1 text-5xl text-blue-900 group-hover:scale-110 transition-transform duration-300 block"></i>
+              </Link>
+              <h2 className="text-2xl font-bold text-gray-800 uppercase mb-4">L' ATELIER</h2>
+              <div className="w-12 h-1 bg-gray-200 mx-auto mb-6 group-hover:bg-blue-900 transition-colors"></div>
+              <p className="text-gray-600 mb-6">
+                Nos mécaniciens assurent avec compétence l'entretien et la réparation de tout type de voitures de tourisme et véhicules utilitaires légers.
+              </p>
+              <Link href="/garage" className="text-blue-900 font-semibold hover:text-blue-700 hover:underline">
+                plus de détail →
+              </Link>
+            </div>
+
+            {/* Shop */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+              <Link href="/shop" className="inline-block mb-6">
+                <i className="flaticon-shop text-5xl text-blue-900 group-hover:scale-110 transition-transform duration-300 block"></i>
+              </Link>
+              <h2 className="text-2xl font-bold text-gray-800 uppercase mb-4">LE SHOP</h2>
+              <div className="w-12 h-1 bg-gray-200 mx-auto mb-6 group-hover:bg-blue-900 transition-colors"></div>
+              <p className="text-gray-600 mb-6">
+                Une petite soif, un BBQ de dernière minute... du produit frais au surgelé ou ménager vous trouverez de tout à notre shop.
+              </p>
+              <Link href="/shop" className="text-blue-900 font-semibold hover:text-blue-700 hover:underline">
+                plus de détail →
+              </Link>
+            </div>
+
+            {/* Lavage */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group">
+              <Link href="/lavage" className="inline-block mb-6">
+                <span className="flaticon-car-wash text-5xl text-blue-900 group-hover:scale-110 transition-transform duration-300 block"></span>
+              </Link>
+              <h2 className="text-2xl font-bold text-gray-800 uppercase mb-4">LE LAVAGE</h2>
+              <div className="w-12 h-1 bg-gray-200 mx-auto mb-6 group-hover:bg-blue-900 transition-colors"></div>
+              <p className="text-gray-600 mb-6">
+                Une piste de lavage haute pression, un aspirateur et des produits de nettoyage pour chaque détail de l'extérieur à l'intérieur.
+              </p>
+              <Link href="/lavage" className="text-blue-900 font-semibold hover:text-blue-700 hover:underline">
+                plus de détail →
+              </Link>
             </div>
 
           </div>
         </div>
       </section>
 
-      <section id="box-list" className="bg-grey bg-no-repeat bg-img-right-bottom" data-bg-img="/img/bg2.png" style={{ backgroundImage: 'url("/img/bg2.png")' }}>
-        <div className="container text-center">
-          <div className="section-content">
-
-            <div className="row">
-              <div className="col-md-6 boxes slideanim">
-                <Link href="/station"><i className="flaticon-refuel logo-small"></i></Link>
-                <h2 className="title">LA STATION-SERVICE</h2><hr className="hr-title" />
-                <p className="title-p">Vous pouvez y effectuer le plein de carburant 7/7 jours - 24/24 heures avec paiement par carte ou cache en CHF ou Euro<br /><Link href="/station" className="follow-link">plus de d&eacute;tail →</Link></p>
-              </div>
-              <div className="col-md-6 boxes slideanim">
-                <Link href="/garage"><i className="flaticon-car-repair-1 logo-small"></i></Link>
-                <h2 className="title">L' ATELIER</h2><hr className="hr-title" />
-                <p className="title-p">Nos m&eacute;caniciens assurent avec comp&eacute;tence l'entretien et la r&eacute;paration de tout type de voitures de tourisme et v&eacute;hicules utilitaires l&eacute;gers<br /><Link href="/garage" className="follow-link">plus de d&eacute;tail →</Link></p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-6 boxes slideanim">
-                <Link href="/shop"><i className="flaticon-shop logo-small"></i></Link>
-                <h2 className="title">LE SHOP</h2><hr className="hr-title" />
-                <p className="title-p">Une petite soif, un BBQ de derni&egrave;re minute... du produit frais au surgel&eacute; ou m&eacute;nag&eacute; vous trouverez de tout &agrave; notre shop<br /><Link href="/shop" className="follow-link">plus de d&eacute;tail →</Link></p>
-              </div>
-              <div className="col-md-6 boxes slideanim">
-                <Link href="/lavage"><span className="flaticon-car-wash logo-small"></span></Link>
-                <h2 className="title">LE LAVAGE</h2><hr className="hr-title" />
-                <p className="title-p">Une piste de lavage haute pression, un aspirateur et des produits de nettoyage pour chaque d&eacute;tail de l'ext&eacute;rieur à l'int&eacute;rieur<br /><Link href="/lavage" className="follow-link">plus de d&eacute;tail →</Link></p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section id="partner" className="partner">
-        <div className="container text-center">
-          <div className="section-content">
-            <PartnerCarousel />
-          </div>
-        </div>
+      {/* Partner Section */}
+      <section id="partner" className="bg-white border-t border-gray-100">
+        <PartnerCarousel />
       </section>
     </main>
   );

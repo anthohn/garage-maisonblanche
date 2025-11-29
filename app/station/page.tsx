@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import HomeScripts from '@/components/HomeScripts';
 
 export const metadata: Metadata = {
     title: "La Station-Service | Garage Maison-Blanche",
@@ -8,92 +7,97 @@ export const metadata: Metadata = {
 
 export default function Station() {
     return (
-        <main>
-            <HomeScripts />
-            <div className="jumbotron text-center" style={{ backgroundImage: 'url(/img/oil.jpg)', padding: '200px 25px' }}>
-                <h1><span className="text-bg-colored text-uppercase font-opensans font-weight-600">Garage Maison-Blanche</span></h1>
-                <p style={{ paddingTop: '10px' }}><span className="text-bg-white">Jean-Fran&ccedil;ois H&ouml;hn</span><br />
-                    Le meilleur service pour la r&eacute;paration et l'entretien de votre voiture</p>
+        <main className="pt-20">
+            {/* Hero Section */}
+            <div className="relative h-[500px] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/img/oil.jpg)' }}>
+                <div className="relative z-10 text-center text-white px-4">
+                    <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-4">
+                        <span className="bg-blue-900 px-4 py-2 inline-block">Garage Maison-Blanche</span>
+                    </h1>
+                    <p className="text-xl font-light mt-4">
+                        <span className="bg-white text-gray-900 px-2 py-1 font-medium">Jean-François Höhn</span>
+                        <br className="my-2" />
+                        Le meilleur service pour la réparation et l'entretien de votre voiture
+                    </p>
+                </div>
             </div>
 
-            <section id="about">
-                <div className="container">
-                    <div className="section-content">
-
-                        <div className="row">
-
-                            <div className="col-md-4 text-center slideanim">
-                                <img className="img-thumbnail" src="/img/logo-shell-3carb3.png" style={{ padding: '25px' }} alt="" />
-                            </div>
-
-                            <div className="col-md-8">
-                                <h2 className="title"><span className="text-colored">La Station-Service</span></h2>
-                                <h4>Faire le plein de carburant 7/7&nbsp;jours&nbsp;-&nbsp;24/24&nbsp;heures</h4>
-                                <p>Shell d&eacute;veloppe des carburants performants depuis plus de 100 ans. Avec les carburants de qualit&eacute; Shell sans plomb 95 et Shell Diesel, vous b&eacute;n&eacute;ficier des technologies DYNAFLEX.<br />Les carburants avec technologies DYNAFLEX aident &agrave; garder votre moteur propre et &agrave; le prot&eacute;ger pour un fonctionnement efficace.</p>
-                                <h5>Les carburants disponibles</h5>
-                                <ul style={{ listStyleType: 'square' }}>
-                                    <li>Shell V-Power 100</li>
-                                    <li>Shell Diesel</li>
-                                    <li>Shell Sans Plomb 95</li>
-                                </ul>
-                            </div>
-
+            {/* About Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center gap-12">
+                        <div className="md:w-1/3 text-center">
+                            <img className="w-full max-w-xs mx-auto p-4 border border-gray-200 rounded-lg shadow-sm" src="/img/logo-shell-3carb3.png" alt="Shell Logo" />
                         </div>
-
+                        <div className="md:w-2/3">
+                            <h2 className="text-3xl font-bold text-gray-800 mb-4 border-l-4 border-blue-900 pl-4">La Station-Service</h2>
+                            <h4 className="text-xl text-gray-600 mb-6 font-light">Faire le plein de carburant 7/7 jours - 24/24 heures</h4>
+                            <p className="text-gray-600 mb-6 leading-relaxed">
+                                Shell développe des carburants performants depuis plus de 100 ans. Avec les carburants de qualité Shell sans plomb 95 et Shell Diesel, vous bénéficier des technologies DYNAFLEX.<br />
+                                Les carburants avec technologies DYNAFLEX aident à garder votre moteur propre et à le protéger pour un fonctionnement efficace.
+                            </p>
+                            <h5 className="font-bold text-gray-800 mb-3">Les carburants disponibles</h5>
+                            <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                                <li>Shell V-Power 100</li>
+                                <li>Shell Diesel</li>
+                                <li>Shell Sans Plomb 95</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="2" className="bg-grey">
-                <div className="container">
-                    <div className="section-content">
+            {/* Services Section */}
+            <section className="py-16 bg-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-semibold text-gray-800">A votre <span className="text-blue-900">disposition</span></h2>
+                    </div>
 
-                        <div className="row">
-                            <div className="text-center">
-                                <h2>A votre <span className="text-colored">disposition</span></h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        {/* Nettoyage */}
+                        <div className="bg-white p-6 rounded-lg shadow-md flex gap-6 items-start">
+                            <div className="flex-shrink-0">
+                                <i className="flaticon-car-7 text-4xl text-gray-400"></i>
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold text-gray-800 mb-2">Nettoyage du pare-brise</h4>
+                                <p className="text-gray-600">
+                                    Pour une visibilité impeccable.<br />
+                                    Nous mettons à votre disposition le matériel nécessaire <span className="font-semibold">pour un nettoyage simple et rapide</span> de vos vitres extérieurs. Pour un nettoyage intérieur, différents produits sont en ventes à notre shop.
+                                </p>
                             </div>
                         </div>
 
-                        <div className="row">
-
-                            <div className="col-md-6 slideanim">
-                                <div className="media box-grey">
-                                    <div className="media-left">
-                                        <i className="flaticon-car-7 logo-x-small"></i>
-                                    </div>
-                                    <div className="media-body">
-                                        <h4>Nettoyage du pare-brise</h4>
-                                        <p>Pour une visibilit&eacute; impeccable.<br />Nous mettons &agrave; votre disposition le mat&eacute;riel n&eacute;cessaire <span className="font-weight-600">pour un nettoyage simple et rapide</span> de vos vitres ext&eacute;rieurs. Pour un nettoyage int&eacute;rieur, diff&eacute;rents produits sont en ventes &agrave; notre shop.</p>
-                                    </div>
-                                </div>
+                        {/* Pression */}
+                        <div className="bg-white p-6 rounded-lg shadow-md flex gap-6 items-start">
+                            <div className="flex-shrink-0">
+                                <i className="flaticon-wheel text-4xl text-gray-400"></i>
                             </div>
-
-                            <div className="col-md-6 slideanim">
-                                <div className="media box-grey">
-                                    <div className="media-left">
-                                        <i className="flaticon-wheel logo-x-small"></i>
-                                    </div>
-                                    <div className="media-body">
-                                        <h4>Pression des pneus</h4>
-                                        <p>Pas seulement une question de s&eacute;curit&eacute; !<br />Des pneus <span className="font-weight-600">trop ou pas assez gonfl&eacute;s</span> augmentent la consommation de carburant et affecte leur dur&eacute;e de vie. Plusieurs bonnes raisons  de v&eacute;rifier r&eacute;guli&egrave;rement leurs pressions.</p>
-                                    </div>
-                                </div>
+                            <div>
+                                <h4 className="text-xl font-bold text-gray-800 mb-2">Pression des pneus</h4>
+                                <p className="text-gray-600">
+                                    Pas seulement une question de sécurité !<br />
+                                    Des pneus <span className="font-semibold">trop ou pas assez gonflés</span> augmentent la consommation de carburant et affecte leur durée de vie. Plusieurs bonnes raisons de vérifier régulièrement leurs pressions.
+                                </p>
                             </div>
-
-                            <div className="col-md-12 slideanim">
-                                <div className="media box-grey">
-                                    <div className="media-left">
-                                        <i className="flaticon-car-repair-12 logo-x-small"></i>
-                                    </div>
-                                    <div className="media-body">
-                                        <h4>Contr&ocirc;le des niveaux</h4>
-                                        <p>Il n'y a pas que de l'huile...<br />Afin de prolonger la dur&eacute;e de vie et d'optimiser la performance du moteur controlez periodiquement son niveau d'huile.<br /><span className="font-weight-600">Tout aussi important</span>, le niveau du liquide de freins, du produit lave-glace, d'antigel pour le radiateur/lave-glace et bien d'autres syst&egrave;me hydraulique pr&eacute;sent dans votre v&eacute;hicule.<br />Notre &eacute;quipe de m&eacute;canicien vous conseillera volontiers pendant les heures d'ouverture de l'atelier.</p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-                        <br />
+                    </div>
+
+                    {/* Contrôle */}
+                    <div className="bg-white p-6 rounded-lg shadow-md flex gap-6 items-start">
+                        <div className="flex-shrink-0">
+                            <i className="flaticon-car-repair-12 text-4xl text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 className="text-xl font-bold text-gray-800 mb-2">Contrôle des niveaux</h4>
+                            <p className="text-gray-600">
+                                Il n'y a pas que de l'huile...<br />
+                                Afin de prolonger la durée de vie et d'optimiser la performance du moteur controlez periodiquement son niveau d'huile.<br />
+                                <span className="font-semibold">Tout aussi important</span>, le niveau du liquide de freins, du produit lave-glace, d'antigel pour le radiateur/lave-glace et bien d'autres système hydraulique présent dans votre véhicule.<br />
+                                Notre équipe de mécanicien vous conseillera volontiers pendant les heures d'ouverture de l'atelier.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import HomeScripts from '@/components/HomeScripts';
 
 export const metadata: Metadata = {
     title: "Le Lavage | Garage Maison-Blanche",
@@ -8,118 +7,125 @@ export const metadata: Metadata = {
 
 export default function Lavage() {
     return (
-        <main>
-            <HomeScripts />
-            <div className="jumbotron text-center" style={{ backgroundImage: 'url(/img/oil.jpg)', padding: '200px 25px' }}>
-                <h1><span className="text-bg-colored text-uppercase font-opensans font-weight-600">Garage Maison-Blanche</span></h1>
-                <p style={{ paddingTop: '10px' }}><span className="text-bg-white">Jean-Fran&ccedil;ois H&ouml;hn</span><br />
-                    Le meilleur service pour la r&eacute;paration et l'entretien de votre voiture</p>
+        <main className="pt-20">
+            {/* Hero Section */}
+            <div className="relative h-[500px] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/img/oil.jpg)' }}>
+                <div className="relative z-10 text-center text-white px-4">
+                    <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-4">
+                        <span className="bg-blue-900 px-4 py-2 inline-block">Garage Maison-Blanche</span>
+                    </h1>
+                    <p className="text-xl font-light mt-4">
+                        <span className="bg-white text-gray-900 px-2 py-1 font-medium">Jean-François Höhn</span>
+                        <br className="my-2" />
+                        Le meilleur service pour la réparation et l'entretien de votre voiture
+                    </p>
+                </div>
             </div>
 
-            <section id="about">
-                <div className="container text-center">
-                    <div className="section-content">
-
-                        <div className="row">
-
-                            <div className="col-md-8 text-right">
-                                <h2 className="title"><span className="text-colored">Le Lavage</span></h2>
-                                <h4>Une installation de lavage pour votre v&eacute;hicule ouvert 7/7&nbsp;jours de 6h00 &agrave; 22h00</h4>
-                                <p>Chez nous, vous trouverez tout ce qui concerne le nettoyage de votre v&eacute;hicule. De nombreux produits pour le nettoyage de la carrosserie ainsi que pour l'int&eacute;rieur sont disponibles dans notre shop.</p>
-                            </div>
-                            <div className="col-md-4 text-center slideanim">
-                                <img className="img-thumbnail" src="/img/self-car-washing.jpg" style={{ padding: '5px' }} alt="" />
-                            </div>
-
+            {/* About Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center gap-12">
+                        <div className="md:w-2/3 text-right">
+                            <h2 className="text-3xl font-semibold text-gray-800 mb-4 border-r-4 border-blue-900 pr-4">Le Lavage</h2>
+                            <h4 className="text-xl text-gray-600 mb-6 font-light">Une installation de lavage pour votre véhicule ouvert 7/7 jours de 6h00 à 22h00</h4>
+                            <p className="text-gray-600 leading-relaxed">
+                                Chez nous, vous trouverez tout ce qui concerne le nettoyage de votre véhicule. De nombreux produits pour le nettoyage de la carrosserie ainsi que pour l'intérieur sont disponibles dans notre shop.
+                            </p>
                         </div>
-
+                        <div className="md:w-1/3">
+                            <img className="rounded-lg shadow-lg w-full" src="/img/self-car-washing.jpg" alt="Lavage auto" />
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="2" className="bg-grey">
-                <div className="container">
-                    <div className="section-content">
+            {/* Services Section */}
+            <section className="py-16 bg-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-800">A votre <span className="text-blue-900">service</span></h2>
+                    </div>
 
-                        <div className="row">
-                            <div className="text-center">
-                                <h2>A votre <span className="text-colored">service</span></h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        {/* Haute Pression */}
+                        <div className="bg-white p-6 rounded-lg shadow-md flex gap-6 items-start">
+                            <div className="flex-shrink-0">
+                                <i className="flaticon-car-wash text-4xl text-gray-400"></i>
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold text-gray-800 mb-2">Lavage haute pression</h4>
+                                <p className="text-gray-600 mb-2">
+                                    Une piste de lavage haute pression self-service avec <span className="font-semibold">6 programmes</span> comprenant le lavage avec shampooing chaud, mousse active à la brosse, super-rinçage avec eau déminéralisée et cire de finition pour redonner de l'éclat à votre carrosserie.
+                                </p>
+                                <p className="text-blue-900 font-semibold">Pièces acceptées 1.- / 2.- / 5.- CHF</p>
                             </div>
                         </div>
 
-                        <div className="row">
-
-                            <div className="col-md-6 slideanim">
-                                <div className="media box-grey">
-                                    <div className="media-left">
-                                        <i className="flaticon-car-wash logo-x-small"></i>
-                                    </div>
-                                    <div className="media-body">
-                                        <h4>Lavage haute pression</h4>
-                                        <p>Une piste de lavage haute pression self-service avec <span className="font-weight-600">6&nbsp;programmes</span> comprenant le lavage avec shampooing chaud, mousse active &agrave; la brosse, super-rinçage avec eau d&eacute;min&eacute;ralis&eacute;e et cire de finition pour redonner de l'&eacute;clat à votre carrosserie.</p>
-                                        <p><span className="font-weight-600">Pi&egrave;ces acceptées 1.- / 2.- / 5.- CHF</span></p>
-                                    </div>
-                                </div>
+                        {/* Aspirateur */}
+                        <div className="bg-white p-6 rounded-lg shadow-md flex gap-6 items-start">
+                            <div className="flex-shrink-0">
+                                <i className="flaticon-parking text-4xl text-gray-400"></i>
                             </div>
-
-                            <div className="col-md-6 slideanim">
-                                <div className="media box-grey">
-                                    <div className="media-left">
-                                        <i className="flaticon-parking logo-x-small"></i>
-                                    </div>
-                                    <div className="media-body">
-                                        <h4>Aspirateur</h4>
-                                        <p>Plus de puissance pour plus d'efficacit&eacute;!<br />Avec son <span className="font-weight-600">grand pouvoir d'aspiration</span> et un tuyau de grande longueur, notre installation vous permet de circuler ais&eacute;ment autour de votre v&eacute;hicule pour une facilit&eacute; d'utilisation et un r&eacute;sultat impeccable.</p>
-                                        <p><span className="font-weight-600">Pi&egrave;ce acceptée 1.- CHF</span></p>
-                                    </div>
-                                </div>
+                            <div>
+                                <h4 className="text-xl font-bold text-gray-800 mb-2">Aspirateur</h4>
+                                <p className="text-gray-600 mb-2">
+                                    Plus de puissance pour plus d'efficacité!<br />
+                                    Avec son <span className="font-semibold">grand pouvoir d'aspiration</span> et un tuyau de grande longueur, notre installation vous permet de circuler aisément autour de votre véhicule pour une facilité d'utilisation et un résultat impeccable.
+                                </p>
+                                <p className="text-blue-900 font-semibold">Pièce acceptée 1.- CHF</p>
                             </div>
-
-                            <div className="col-md-12 slideanim">
-                                <div className="media box-grey">
-                                    <div className="media-left">
-                                        <i className="flaticon-car-wash-1 logo-x-small"></i>
-                                    </div>
-                                    <div className="media-body">
-                                        <h4>Laissez-nous faire</h4>
-                                        <p>Avant ou apr&egrave;s une journ&eacute;e de travail vous n'avez pas ou plus le courage de laver votre voiture, prenez un caf&eacute; au shop et <span className="font-weight-600">nous nous occupons de tout</span>. Nous vous proposons diff&eacute;rent soin pour votre v&eacute;hicule.</p>
-                                        <p>Pour un nettoyage approfondi <span className="font-weight-600">&Lt;Lavage&nbsp;Premium&Gt;</span> demandez un devis a notre &eacute;quipe de l'atelier.</p>
-                                        <table className="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Pendant les heures d'ouvertures de l'atelier</th>
-                                                    <th>Dur&eacute;e</th>
-                                                    <th>Tarif CHF</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Ext&eacute;rieur (Lavage carrosserie et roues uniquement)</td>
-                                                    <td>15 min.</td>
-                                                    <td>30.-</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Int&eacute;rieur (Aspirateur, Vitres, D&eacute;poussi&eacute;rage)</td>
-                                                    <td>30 min.</td>
-                                                    <td>60.-</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ext&eacute;rieur + Int&eacute;rieur</td>
-                                                    <td>45 min.</td>
-                                                    <td>80.-</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Lavage Premium</td>
-                                                    <td colSpan={2}>nous consulter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-                        <br />
+                    </div>
+
+                    {/* Full Service */}
+                    <div className="bg-white p-8 rounded-lg shadow-lg">
+                        <div className="flex flex-col md:flex-row gap-8">
+                            <div className="md:w-1/3 flex flex-col items-center text-center">
+                                <i className="flaticon-car-wash-1 text-5xl text-gray-400 mb-4"></i>
+                                <h4 className="text-xl font-bold text-gray-800 mb-2">Laissez-nous faire</h4>
+                                <p className="text-gray-600">
+                                    Avant ou après une journée de travail vous n'avez pas ou plus le courage de laver votre voiture, prenez un café au shop et <span className="font-semibold">nous nous occupons de tout</span>.
+                                </p>
+                            </div>
+                            <div className="md:w-2/3">
+                                <p className="text-gray-600 mb-6">
+                                    Pour un nettoyage approfondi <span className="font-semibold">&lt;Lavage Premium&gt;</span> demandez un devis a notre équipe de l'atelier.
+                                </p>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr className="border-b border-gray-200">
+                                                <th className="py-3 font-semibold text-gray-700">Pendant les heures d'ouvertures de l'atelier</th>
+                                                <th className="py-3 font-semibold text-gray-700">Durée</th>
+                                                <th className="py-3 font-semibold text-gray-700">Tarif CHF</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-gray-600">
+                                            <tr className="border-b border-gray-100">
+                                                <td className="py-3">Extérieur (Lavage carrosserie et roues uniquement)</td>
+                                                <td className="py-3">15 min.</td>
+                                                <td className="py-3 font-semibold">30.-</td>
+                                            </tr>
+                                            <tr className="border-b border-gray-100">
+                                                <td className="py-3">Intérieur (Aspirateur, Vitres, Dépoussiérage)</td>
+                                                <td className="py-3">30 min.</td>
+                                                <td className="py-3 font-semibold">60.-</td>
+                                            </tr>
+                                            <tr className="border-b border-gray-100">
+                                                <td className="py-3">Extérieur + Intérieur</td>
+                                                <td className="py-3">45 min.</td>
+                                                <td className="py-3 font-semibold">80.-</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="py-3">Lavage Premium</td>
+                                                <td colSpan={2} className="py-3 italic">nous consulter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

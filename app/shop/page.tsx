@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import HomeScripts from '@/components/HomeScripts';
 
 export const metadata: Metadata = {
     title: "Le Shop | Garage Maison-Blanche",
@@ -7,60 +6,52 @@ export const metadata: Metadata = {
 };
 
 export default function Shop() {
+    const shopItems = [
+        { title: "Boissons/Snacks", desc: "Boulangerie/viennoiserie, sandwichs et boissons diverses, sucreries, Chewing-gums, chips", img: "/img/shop2.jpg" },
+        { title: "Tabac", desc: "Cigarettes, cigares, CBD légal ainsi que divers produits de tabac et ustensiles pour fumeurs", img: "/img/shop1.jpg" },
+        { title: "Alimentaires", desc: "Du produit frais au surgelé, diverses conserves, glaçons, glace pilée, œuf frais de la ferme", img: "/img/shop3.jpg" },
+        { title: "Non-Alimentaire", desc: "Articles d'hygiène, nourriture pour animaux, produit d'entretien et nettoyage", img: "/img/shop4.jpg" },
+        { title: "Recharge/Prepaid", desc: "Recharge crédit téléphonique, Prepaid, bon cadeau (Gift card) comme: Wishcard, Salt., M-Budget, Netflix, Spotify, Zalando, etc...", img: "/img/shopcardsmall.jpg" },
+        { title: "Autres", desc: "Bouteilles pour gril à gaz, Loterie Romande, batteries, accessoires téléphonie", img: "/img/shop6.jpg" },
+    ];
+
     return (
-        <main>
-            <HomeScripts />
-            <div className="jumbotron text-center" style={{ backgroundImage: 'url(/img/oil.jpg)', padding: '200px 25px' }}>
-                <h1><span className="text-bg-colored text-uppercase font-opensans font-weight-600">Garage Maison-Blanche</span></h1>
-                <p style={{ paddingTop: '10px' }}><span className="text-bg-white">Jean-Fran&ccedil;ois H&ouml;hn</span><br />
-                    Le meilleur service pour la r&eacute;paration et l'entretien de votre voiture</p>
+        <main className="pt-20">
+            {/* Hero Section */}
+            <div className="relative h-[500px] flex items-center justify-center bg-center" style={{ backgroundImage: 'url(/img/oil.jpg)' }}>
+                <div className="relative z-10 text-center text-white px-4">
+                    <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-4">
+                        <span className="bg-blue-900 px-4 py-2 inline-block">Garage Maison-Blanche</span>
+                    </h1>
+                    <p className="text-xl font-light mt-4">
+                        <span className="bg-white text-gray-900 px-2 py-1 font-medium">Jean-François Höhn</span>
+                        <br className="my-2" />
+                        Le meilleur service pour la réparation et l'entretien de votre voiture
+                    </p>
+                </div>
             </div>
 
-            <section id="about">
-                <div className="container text-center">
-                    <div className="section-content">
+            {/* Shop Section */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-semibold text-blue-900 mb-4">Le Shop</h2>
+                        <h4 className="text-xl text-gray-600 mb-4 font-light">Un produit vous manque... notre shop est ouvert 7/7 jours</h4>
+                        <p className="text-gray-500">Un vaste assortiment de produits de kiosque</p>
+                    </div>
 
-                        <div className="row">
-                            <div className="col-md-12" style={{ marginBottom: '30px' }}>
-                                <h2 className="title"><span className="text-colored">Le Shop</span></h2>
-                                <h4>Un produit vous manque... notre shop est ouvert 7/7&nbsp;jours</h4>
-                                <p>Un vaste assortiment de produits de kiosque</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+                        {shopItems.map((item, index) => (
+                            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                                <div className="h-48 overflow-hidden">
+                                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
+                                    <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col-md-4 slideanim">
-                                <img className="img-thumbnail" style={{ marginTop: '30px' }} src="/img/shop2.jpg" alt="" />
-                                <h2>Boissons/Snacks</h2>
-                                <p>Boulangerie/viennoiserie, sandwichs et boissons diverses, sucreries, Chewing-gums, chips</p>
-                            </div>
-                            <div className="col-md-4 slideanim">
-                                <img className="img-thumbnail" style={{ marginTop: '30px' }} src="/img/shop1.jpg" alt="" />
-                                <h2>Tabac</h2>
-                                <p>Cigarettes, cigares, CBD&nbsp;l&eacute;gal ainsi que divers produits de tabac et ustensiles pour fumeurs</p>
-                            </div>
-                            <div className="col-md-4 slideanim">
-                                <img className="img-thumbnail" style={{ marginTop: '30px' }} src="/img/shop3.jpg" alt="" />
-                                <h2>Alimentaires</h2>
-                                <p>Du produit frais au surgel&eacute;, diverses conserves, glaçons, glace pil&eacute;e, &oelig;uf frais de la ferme</p>
-                            </div>
-                            <div className="col-md-4 slideanim">
-                                <img className="img-thumbnail" style={{ marginTop: '30px' }} src="/img/shop4.jpg" alt="" />
-                                <h2>Non-Alimenmtaire</h2>
-                                <p>Articles d'hygi&egrave;ne, nourriture pour animaux, produit d'entretien et nettoyage</p>
-                            </div>
-                            <div className="col-md-4 slideanim">
-                                <img className="img-thumbnail" style={{ marginTop: '30px' }} src="/img/shopcardsmall.jpg" alt="" />
-                                <h2>Recharge/Prepaid</h2>
-                                <p>Recharge cr&eacute;dit t&eacute;l&eacute;phonique, Prepaid, bon cadeau (Gift&nbsp;card) comme: Wishcard, Salt., M-Budget, Netflix, Spotify, Zalando, etc...</p>
-                            </div>
-                            <div className="col-md-4 slideanim">
-                                <img className="img-thumbnail" style={{ marginTop: '30px' }} src="/img/shop6.jpg" alt="" />
-                                <h2>Autres</h2>
-                                <p>Bouteilles pour gril à gaz, Loterie Romande, batteries, accessoires&nbsp;t&eacute;l&eacute;phonie</p>
-                            </div>
-                        </div>
-
+                        ))}
                     </div>
                 </div>
             </section>

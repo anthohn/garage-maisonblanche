@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { Montserrat, Lato, Courgette, Merienda, PT_Serif, Palanquin, Raleway, Open_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
+const lato = Lato({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-lato" });
+const courgette = Courgette({ weight: "400", subsets: ["latin"], variable: "--font-courgette" });
+const merienda = Merienda({ subsets: ["latin"], variable: "--font-merienda" });
+const ptSerif = PT_Serif({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-pt-serif" });
+const palanquin = Palanquin({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-palanquin" });
+const raleway = Raleway({ subsets: ["latin"], variable: "--font-raleway" });
+const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://garage-maisonblanche.ch"),
@@ -17,12 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${montserrat.variable} ${lato.variable} ${courgette.variable} ${merienda.variable} ${ptSerif.variable} ${palanquin.variable} ${raleway.variable} ${openSans.variable}`}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="format-detection" content="telephone=no" />
         <meta name="theme-color" content="#ffffff" />
-
         {/* Icons */}
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -41,40 +47,15 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
-        {/* CSS */}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossOrigin="anonymous" />
-
-        {/* Fonts */}
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700|Open+Sans:400,600,700|Montserrat" rel="stylesheet" />
-
-        {/* Custom Fonts/Icons */}
+        {/* Custom Fonts/Icons - Keeping local fonts for now, assuming they are needed for specific icons */}
         <link rel="stylesheet" href="/inc/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="/inc/font-garage/flaticon.css" />
         <link rel="stylesheet" type="text/css" href="/inc/font-shop/flaticon.css" />
-
-        {/* Plugins */}
-        <link rel="stylesheet" href="/inc/owlcarousel/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="/inc/owlcarousel/assets/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-
-        {/* Main Style */}
-        <link rel="stylesheet" href="/css/style.default.css" />
       </head>
-      <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+      <body className="antialiased">
         <Navbar />
         {children}
         <Footer />
-
-        {/* Scripts */}
-        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" strategy="beforeInteractive" />
-        <Script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossOrigin="anonymous" strategy="lazyOnload" />
-        <Script src="/inc/owlcarousel/owl.carousel.min.js" strategy="lazyOnload" />
       </body>
     </html>
   );
