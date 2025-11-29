@@ -1,0 +1,6 @@
+User-agent: *
+Crawl-delay: 10
+Disallow: /inc/
+Disallow: /img/
+Disallow: /404.html
+Sitemap: https://www.garagemaisonblanche.ch/sitemap.xml
