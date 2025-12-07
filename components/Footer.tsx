@@ -11,7 +11,7 @@ export default function Footer() {
                                 <h2>Gararge Maison-Blanche SA</h2>
                                 <p>Jean-Fran&ccedil;ois H&ouml;hn<br />
                                     500, Route de Chancy<br />1284 Chancy</p>
-                                <p><a href="mailto:contact@garage-maisonblanche.ch">contact@garage-maisonblanche.ch</a></p>
+                                <p><a href="mailto:atelier@garage-maisonblanche.ch">atelier@garage-maisonblanche.ch</a></p>
                                 <div id="map" className="map-small">
                                     <iframe
                                         width="100%"
@@ -40,7 +40,7 @@ export default function Footer() {
                                         <p>T&eacute;l.&nbsp;&nbsp;<a href="tel:+41227560404">+41 22 756 04 04</a><br />Fax&nbsp;&nbsp;+41 22 756 15 58</p>
                                     </div>
                                     <div className="col-xs-6 text-right">
-                                        <p><a href="mailto:contact@garage-maisonblanche.ch">contact@garage-maisonblanche.ch</a></p>
+                                        <p><a href="mailto:atelier@garage-maisonblanche.ch">atelier@garage-maisonblanche.ch</a></p>
                                     </div>
                                 </div>
                                 <div style={{ marginTop: '20px', marginBottom: '5px', fontSize: '14px', fontWeight: '600 !important' } as any}>Le Lavage<hr style={{ margin: '0px' }} /></div>
