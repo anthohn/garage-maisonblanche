@@ -15,8 +15,8 @@ export default function Footer() {
                             1284 Chancy
                         </p>
                         <p className="mb-6">
-                            <a href="mailto:contact@garage-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">
-                                contact@garage-maisonblanche.ch
+                            <a href="mailto:atelier@garage-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">
+                                atelier@garage-maisonblanche.ch
                             </a>
                         </p>
                         <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
@@ -52,7 +52,7 @@ export default function Footer() {
                                     <p>Fax +41 22 756 15 58</p>
                                 </div>
                                 <div className="text-right">
-                                    <a href="mailto:contact@garage-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">contact@garage-maisonblanche.ch</a>
+                                    <a href="mailto:atelier@garage-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">atelier@garage-maisonblanche.ch</a>
                                 </div>
                             </div>
                         </div>
