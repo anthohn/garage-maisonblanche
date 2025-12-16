@@ -16,9 +16,9 @@ export default function Header() {
 
     return (
         <>
-            {/* Header flottant avec design en 3 sections */}
+            {/* Header full width fixed top */}
             <motion.nav
-                className="fixed top-6 left-6 right-6 z-50 transition-all duration-300"
+                className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
                 initial={{ opacity: 0, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -26,8 +26,8 @@ export default function Header() {
                     duration: 0.4
                 }}
             >
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/50">
-                    <div className="px-6 py-4 flex items-center justify-between max-w-screen-2xl mx-auto">
+                <div className="bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-200">
+                    <div className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
                         {/* Section 1: Logo à gauche */}
                         <div className="flex items-center">
                             <Link href="/" className="flex items-center space-x-3 text-black text-xl md:text-2xl font-bold hover:text-gray-600 transition-colors">
@@ -106,7 +106,7 @@ export default function Header() {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="md:hidden mt-2 bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/50"
+                            className="md:hidden bg-white border-b border-gray-200 shadow-lg"
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
@@ -123,6 +123,10 @@ export default function Header() {
                                         {link.label}
                                     </Link>
                                 ))}
+                                {/* OpenStatus in mobile menu since it's hidden in header for mobile */}
+                                <div className="pt-2 border-t border-gray-100">
+                                    <OpenStatus />
+                                </div>
                             </div>
                         </motion.div>
                     )}
