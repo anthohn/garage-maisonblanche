@@ -30,7 +30,7 @@ export default function Header() {
                     <div className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
                         {/* Section 1: Logo à gauche */}
                         <div className="flex items-center">
-                            <Link href="/" className="flex items-center space-x-3 text-black text-xl md:text-2xl font-bold hover:text-gray-600 transition-colors">
+                            <Link href="/" className="flex items-center space-x-3 text-black text-xl md:text-2xl font-semibold hover:text-gray-600 transition-colors">
                                 <Image
                                     src="/logo.png"
                                     alt="Logo Garage Maison-Blanche"
@@ -39,7 +39,7 @@ export default function Header() {
                                     className="object-contain"
                                 />
                                 <span className="hidden sm:block">Garage Maison-Blanche</span>
-                                <span className="sm:hidden">GMB</span>
+                                <span className="sm:hidden">Garage Maison-Blanche</span>
                             </Link>
                         </div>
 

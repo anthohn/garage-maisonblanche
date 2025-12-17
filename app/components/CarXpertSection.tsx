@@ -5,7 +5,7 @@ import Badge from '@/app/components/ui/Badge';
 
 export default function CarXpertSection() {
     return (
-        <div className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+        <div className="pb-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
             {/* Éléments décoratifs de fond */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-20 w-72 h-72 bg-[#303F9F] rounded-full blur-3xl"></div>
@@ -22,7 +22,7 @@ export default function CarXpertSection() {
                         Membre du réseau
                         <div className="flex justify-center mt-6">
                             <Image
-                                src="/img/partners/carxpert-garages.png"
+                                src="/partners/carxpert-garages.png"
                                 alt="Logo carXpert"
                                 width={300}
                                 height={120}
@@ -117,7 +117,7 @@ export default function CarXpertSection() {
                         {/* Image principale */}
                         <div className="relative w-full h-[620px] bg-gradient-to-br from-blue-100 via-white to-green-100 rounded-3xl overflow-hidden shadow-lg">
                             <Image
-                                src="/img/partners/carxpert.jpg"
+                                src="/partners/carxpert.jpg"
                                 alt="Logo carXpert"
                                 fill
                                 style={{ objectFit: 'cover', position: 'absolute' }}

@@ -8,42 +8,42 @@ export default function LogoBandSection() {
     const logos = [
         {
             name: "carXpert Garages",
-            src: "/img/partners/carxpert-garages.png",
+            src: "/partners/carxpert-garages.png",
             alt: "carXpert Garages",
             description: "Réseau national de garages certifiés",
             url: "https://www.carxpert.ch"
         },
         {
             name: "ClimaService Automotive",
-            src: "/img/partners/clim-service-automotive.png",
+            src: "/partners/clim-service-automotive.png",
             alt: "ClimaService Automotive",
             description: "Spécialiste climatisation automobile",
             url: "https://www.climaservice.ch"
         },
         {
             name: "UPSA AGVS",
-            src: "/img/partners/upsa-agvs.png",
+            src: "/partners/upsa-agvs.png",
             alt: "UPSA AGVS",
             description: "Union Professionnelle Suisse de l'Automobile",
             url: "https://www.agvs-upsa.ch"
         },
         {
             name: "Shell",
-            src: "/img/partners/logo-shell.png",
+            src: "/partners/logo-shell.png",
             alt: "Shell",
             description: "Huiles et lubrifiants de qualité",
             url: "https://www.shell.ch"
         },
         {
             name: "Formation Pro",
-            src: "/img/partners/formation-pro.png",
+            src: "/partners/formation-pro.png",
             alt: "Formation Professionnelle",
             description: "Formation continue et certification",
-            url: "https://www.formation-professionnelle.ch"
+            url: "https://www.formationprof.ch/fr"
         },
         {
             name: "Loterie Romande",
-            src: "/img/partners/loterie-romande.png",
+            src: "/partners/loterie-romande.png",
             alt: "Loterie Romande",
             description: "Partenaire local de confiance",
             url: "https://www.loro.ch"
@@ -51,7 +51,7 @@ export default function LogoBandSection() {
     ];
 
     return (
-        <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <section className="bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
             {/* Éléments décoratifs de fond */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-10 left-1/4 w-64 h-64 bg-[#303F9F] rounded-full blur-3xl"></div>
@@ -60,7 +60,7 @@ export default function LogoBandSection() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 {/* Header avec badge cohérent */}
-                <div className="text-center mb-20">
+                <div className="text-center mb-10">
                     <Badge className="mb-6">
                         Nos Partenaires
                     </Badge>
@@ -74,7 +74,7 @@ export default function LogoBandSection() {
                 </div>
 
                 {/* Grid des logos avec design premium */}
-                <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 mb-8">
+                <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100 mb-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {logos.map((logo, index) => (
                             <a
@@ -82,7 +82,7 @@ export default function LogoBandSection() {
                                 href={logo.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                                className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-white shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
                             >
                                 {/* Logo */}
                                 <div className="h-20 flex items-center justify-center mb-6">

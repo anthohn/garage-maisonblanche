@@ -1,8 +1,8 @@
 import LandingSection from "@/app/components/LandingSection";
 import ClientReviewsSection from "@/app/components/ClientReviewsSection";
-import LogoBandSection from "@/app/components/LogoBandSection";
+import PartnersSection from "@/app/components/PartnersSection";
 import CarForSaleSection from "@/app/components/CarForSaleSection";
-import PresentationSection from "@/app/components/PresentationSection";
+import AboutSection from "@/app/components/AboutSection";
 import CarXpertSection from "@/app/components/CarXpertSection";
 
 
@@ -12,13 +12,13 @@ export default function Home() {
       <div className="w-full">
         <LandingSection />
         <div className="py-12"></div>
-        <PresentationSection />
+        <AboutSection />
         <div className="py-12"></div>
-        <CarForSaleSection />
-        <div className="py-12"></div>
-        <LogoBandSection />
+        <PartnersSection />
         <div className="py-12"></div>
         <CarXpertSection />
+        <div className="py-12"></div>
+        <CarForSaleSection />
         <div className="py-12"></div>
         <ClientReviewsSection />
         <div className="py-12"></div>

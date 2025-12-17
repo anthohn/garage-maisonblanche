@@ -10,7 +10,7 @@ export default function CarForSaleSection() {
     const featuredCars = carsData.slice(0, 3);
 
     return (
-        <section className="py-24 bg-gray-50">
+        <section className="">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header moderne avec badge */}
                 <div className="text-center mb-16">
