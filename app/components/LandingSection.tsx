@@ -4,6 +4,7 @@ import Image from "next/image";
 import Background from '@/public/photoGarage.png'
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
+// import SantaHat from '@/public/santaHat.png'
 
 import ModernButton from "@/app/components/ui/ModernButton";
 
@@ -20,8 +21,8 @@ export default function LandingSection() {
                     priority
                 />
                 {/* Gradient overlay - Removed heavy black overlays, lighter gradient for text readability if needed */}
-                <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-transparent" />
-                {/* <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" /> */}
+                <div className="absolute inset-0 bg-linear-to-r from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
             </div>
 
             {/* Main Content Container */}

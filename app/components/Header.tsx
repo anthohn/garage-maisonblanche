@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { links } from "@/lib/data";
 import Image from "next/image";
+import SantaHat from '@/public/santaHat.png'
 import ModernButton from "@/app/components/ui/ModernButton";
 import OpenStatus from "@/app/components/ui/OpenStatus";
 
@@ -30,14 +31,23 @@ export default function Header() {
                     <div className="px-6 py-4 flex items-center justify-between max-w-7xl mx-auto">
                         {/* Section 1: Logo à gauche */}
                         <div className="flex items-center">
-                            <Link href="/" className="flex items-center space-x-3 text-black text-xl md:text-2xl font-semibold hover:text-gray-600 transition-colors">
-                                <Image
-                                    src="/logo.png"
-                                    alt="Logo Garage Maison-Blanche"
-                                    width={40}
-                                    height={40}
-                                    className="object-contain"
-                                />
+                            <Link href="/" className="flex items-center space-x-3 text-black text-xl md:text-2xl font-semibold hover:text-gray-600 transition-colors relative">
+                                <div className="relative">
+                                    <Image
+                                        src="/logo.png"
+                                        alt="Logo Garage Maison-Blanche"
+                                        width={40}
+                                        height={40}
+                                        className="object-contain"
+                                    />
+                                    <Image
+                                        src={SantaHat}
+                                        alt="Bonnet de Noel"
+                                        width={40}
+                                        height={40}
+                                        className="absolute -top-4 -right-4 rotate-12 drop-shadow-sm pointer-events-none"
+                                    />
+                                </div>
                                 <span className="hidden sm:block">Garage Maison-Blanche</span>
                                 <span className="sm:hidden">Garage Maison-Blanche</span>
                             </Link>
