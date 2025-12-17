@@ -1,120 +1,110 @@
 import Link from 'next/link';
+import { Mail, Phone, MapPin, Clock, Facebook, Linkedin } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-white pt-16 pb-8">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <footer className="bg-linear-to-b from-gray-50 to-blue-600/30 border-t border-gray-200">
+            <div className="max-w-7xl mx-auto px-6 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-6">
 
-                    {/* Contact & Map */}
-                    <div>
-                        <h2 className="text-xl font-bold mb-4">Garage Maison-Blanche SA</h2>
-                        <p className="text-gray-400 mb-4 leading-relaxed">
-                            Jean-François Höhn<br />
-                            500, Route de Chancy<br />
-                            1284 Chancy
-                        </p>
-                        <p className="mb-6">
-                            <a href="mailto:atelier@garage-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">
-                                atelier@garage-maisonblanche.ch
-                            </a>
-                        </p>
-                        <div className="w-full h-48 rounded-lg overflow-hidden shadow-lg">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                frameBorder="0"
-                                scrolling="no"
-                                src="https://maps.google.com/maps?q=Garage+Maison-Blanche+500+Route+de+Chancy+1284+Chancy&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                className="w-full h-full"
-                            ></iframe>
-                        </div>
-                    </div>
-
-                    {/* Atelier & Lavage */}
-                    <div>
-                        {/* Atelier */}
-                        <div className="mb-8">
-                            <h3 className="text-lg font-semibold mb-2 border-b border-gray-700 pb-2">L' Atelier</h3>
-                            <div className="flex justify-between text-sm text-gray-400">
-                                <div>
-                                    <p>Lundi au Vendredi</p>
-                                    <p className="mt-2">Vendredi après-midi</p>
-                                </div>
-                                <div className="text-right">
-                                    <p>7h30 - 12h00<br />13h30 - 18h00</p>
-                                    <p className="mt-2">13h30 - 17h00</p>
-                                </div>
-                            </div>
-                            <div className="flex justify-between text-sm text-gray-400 mt-4">
-                                <div>
-                                    <p>Tél. <a href="tel:+41227560404" className="text-white hover:text-blue-900 transition-colors">+41 22 756 04 04</a></p>
-                                    <p>Fax +41 22 756 15 58</p>
-                                </div>
-                                <div className="text-right">
-                                    <a href="mailto:atelier@garage-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">atelier@garage-maisonblanche.ch</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Lavage */}
+                    {/* 1. Brand & Info */}
+                    <div className="space-y-6">
                         <div>
-                            <h3 className="text-lg font-semibold mb-2 border-b border-gray-700 pb-2">Le Lavage</h3>
-                            <div className="flex justify-between text-sm text-gray-400">
-                                <div>
-                                    <p>Lundi au Dimanche</p>
+                            <h2 className="text-2xl font-bold tracking-tight">Garage Maison-Blanche</h2>
+                            <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Membre carXpert</span>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed text-sm">
+                            Votre partenaire de confiance pour l&apos;entretien et la réparation automobile.
+                            Expertise technique et service personnalisé.
+                        </p>
+                        <div className="flex items-start gap-4">
+                            <div className="mt-1">
+                                <MapPin size={20} className="text-blue-600" />
+                            </div>
+                            <div>
+                                <h4 className="font-semibold">Adresse</h4>
+                                <p className="text-sm">500, Route de Chancy<br />1284 Chancy</p>
+                                <a
+                                    href="https://www.google.com/maps?q=Garage+Maison-Blanche+500+Route+de+Chancy+1284+Chancy"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-xs text-blue-600 hover:underline mt-1 block"
+                                >
+                                    Voir sur la carte
+                                </a>
+                            </div>
+                        </div>
+                        {/* Social Links */}
+                        <div className="flex gap-4 pt-2">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-blue-600 hover:shadow-md transition-all border border-gray-100" aria-label="Facebook">
+                                <Facebook size={20} />
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-blue-700 hover:shadow-md transition-all border border-gray-100" aria-label="LinkedIn">
+                                <Linkedin size={20} />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* 2. Contact */}
+                    <div className="space-y-6">
+                        <h3 className="text-lg font-bold">Nous Contacter</h3>
+
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-4">
+                                <div className="mt-1">
+                                    <Phone size={20} className="text-blue-600" />
                                 </div>
-                                <div className="text-right">
-                                    <p>6h00 - 22h00</p>
+                                <div>
+                                    <h4 className="font-semibold">Téléphone</h4>
+                                    <a href="tel:+41227560404" className="text-sm hover:text-blue-600 transition-colors block">+41 22 756 04 04</a>
+                                    <span className="text-xs text-gray-400">Fax: +41 22 756 15 58</span>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="mt-1">
+                                    <Mail size={20} className="text-blue-600" />
+                                </div>
+                                <div>
+                                    <h4 className="font-semibold">Email</h4>
+                                    <a href="mailto:atelier@garage-maisonblanche.ch" className="text-sm hover:text-blue-600 transition-colors block">atelier@garage-maisonblanche.ch</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Shop & Station */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-2 border-b border-gray-700 pb-2">Le Shop & La Station-service</h3>
-                        <div className="flex justify-between text-sm text-gray-400 mb-4">
-                            <div>
-                                <p>Lundi au Vendredi</p>
-                                <p>Samedi</p>
-                                <p>Dimanche</p>
-                            </div>
-                            <div className="text-right">
-                                <p>6h00 - 20h00</p>
-                                <p>7h00 - 20h00</p>
-                                <p>7h30 - 20h00</p>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-between text-sm text-gray-400 mb-4">
-                            <div>
-                                <p>Automate à billets/cartes</p>
-                            </div>
-                            <div className="text-right">
-                                <p>7/7 jours - 24/24 heures</p>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-between text-sm text-gray-400">
-                            <div>
-                                <p>Tél. <a href="tel:+41227561522" className="text-white hover:text-blue-900 transition-colors">+41 22 756 15 22</a></p>
-                            </div>
-                            <div className="text-right">
-                                <a href="mailto:contact@station-maisonblanche.ch" className="text-blue-900 hover:text-blue-600 transition-colors">contact@station-maisonblanche.ch</a>
+                    {/* 3. Horaires Atelier */}
+                    <div className="space-y-6">
+                        <h3 className="text-lg font-bold flex items-center gap-2">
+                            <Clock size={20} className="text-blue-600" />
+                            Horaires Atelier
+                        </h3>
+                        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <div className="space-y-3 text-sm">
+                                <div className="flex justify-between border-b border-gray-100 pb-2">
+                                    <span className="text-gray-500">Lundi - Jeudi</span>
+                                    <span className="text-gray-900 font-medium text-right">07:30 - 12:00<br />13:30 - 18:00</span>
+                                </div>
+                                <div className="flex justify-between border-b border-gray-100 pb-2">
+                                    <span className="text-gray-500">Vendredi</span>
+                                    <span className="text-gray-900 font-medium text-right">07:30 - 12:00<br />13:30 - 17:00</span>
+                                </div>
+                                <div className="flex justify-between pt-1">
+                                    <span className="text-gray-500">Samedi - Dimanche</span>
+                                    <span className="text-gray-900 font-medium">Fermé</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Copyright */}
-                <div className="border-t border-gray-800 pt-8 text-center">
-                    <p className="text-sm text-gray-500 mb-2">
-                        Copyright &copy; {new Date().getFullYear()} - Garage Maison-Blanche
-                    </p>
-                    <p className="text-xs text-gray-600">
-                        Designed by <span className="font-serif text-gray-500">bni</span> - <a href="https://www.bni.ch" target="_blank" className="hover:text-gray-400 transition-colors">Business Network Integration</a>
-                    </p>
+                {/* Bottom Bar */}
+                <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                    <p>&copy; {new Date().getFullYear()} Garage Maison-Blanche SA</p>
+                    <div className="flex gap-6">
+                        <Link href="#" className="hover:text-blue-600 transition-colors">Mentions Légales</Link>
+                        <Link href="#" className="hover:text-blue-600 transition-colors">Confidentialité</Link>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -10,8 +10,8 @@ export default function SnowEffect() {
         const newFlakes = Array.from({ length: count }).map((_, i) => ({
             id: i,
             left: `${Math.random() * 100}%`,
-            size: Math.random() * 5 + 3, // 3px to 8px
-            duration: `${Math.random() * 10 + 10}s`, // 5s to 10s
+            size: Math.random() * 6 + 1, // 3px to 8px
+            duration: `${Math.random() * 10 + 20}s`, // 5s to 10s
             delay: `-${Math.random() * 10}s`, // Start mid-animation
         }));
         setFlakes(newFlakes);
