@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${openSans.className}`}>
-      <body>
+      <body suppressHydrationWarning>
         <Header />
         {children}
         <Footer />
