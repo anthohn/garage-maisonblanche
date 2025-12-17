@@ -5,12 +5,14 @@ import Background from '@/public/photoGarage.png'
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
 // import SantaHat from '@/public/santaHat.png'
+import SnowEffect from "@/app/components/ui/SnowEffect";
 
 import ModernButton from "@/app/components/ui/ModernButton";
 
 export default function LandingSection() {
     return (
         <section className="relative h-screen min-h-[800px] w-full overflow-hidden font-sans">
+            <SnowEffect />
             {/* Background Image with Gradient Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -24,6 +26,7 @@ export default function LandingSection() {
                 <div className="absolute inset-0 bg-linear-to-r from-black/30 via-transparent to-transparent" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
             </div>
+            <SnowEffect />
 
             {/* Main Content Container */}
             <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
