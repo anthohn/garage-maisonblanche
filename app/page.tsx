@@ -21,8 +21,6 @@ export default function Home() {
         <CarForSaleSection />
         <div className="py-12"></div>
         <ClientReviewsSection />
-        <div className="py-12"></div>
-        <div className="py-12"></div>
       </div>
     </>
   );

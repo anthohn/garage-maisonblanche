@@ -8,17 +8,17 @@ interface ModernButtonProps {
     href?: string;
     className?: string;
     disabled?: boolean;
-    variant?: 'primary' | 'secondary' | 'outlined';
-    size?: 'sm' | 'md' | 'lg';
+    variant?: 'primary' | 'secondary' | 'outlined' | 'glass';
+    size?: 'sm' | 'md' | 'lg' | 'icon';
     showArrow?: boolean;
     icon?: React.ReactNode;
 }
 
-export default function ModernButton({ 
-    children, 
-    onClick, 
+export default function ModernButton({
+    children,
+    onClick,
     href,
-    className = '', 
+    className = '',
     disabled = false,
     variant = 'primary',
     size = 'lg',
@@ -26,21 +26,23 @@ export default function ModernButton({
     icon
 }: ModernButtonProps) {
     const baseClasses = "group relative font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer inline-flex items-center justify-center";
-    
+
     const variantClasses = {
         primary: "bg-[#303F9F] text-white",
         secondary: "bg-gray-600 text-white",
-        outlined: "bg-transparent border-2 border-[#303F9F] text-[#303F9F] hover:bg-[#303F9F] hover:text-white"
+        outlined: "bg-transparent border-2 border-[#303F9F] text-[#303F9F] hover:bg-[#303F9F] hover:text-white",
+        glass: "bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white"
     };
-    
+
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",
-        md: "px-6 py-3 text-base", 
-        lg: "px-8 py-4 text-lg"
+        md: "px-6 py-3 text-base",
+        lg: "px-8 py-4 text-lg",
+        icon: "p-4 h-[60px] w-[60px]"
     };
-    
-    const disabledClasses = disabled 
-        ? "opacity-50 cursor-not-allowed hover:scale-100 hover:shadow-lg" 
+
+    const disabledClasses = disabled
+        ? "opacity-50 cursor-not-allowed hover:scale-100 hover:shadow-lg"
         : "";
 
     const content = (
@@ -72,7 +74,7 @@ export default function ModernButton({
 
     // Sinon, utiliser un bouton classique
     return (
-        <button 
+        <button
             className={classes}
             onClick={onClick}
             disabled={disabled}

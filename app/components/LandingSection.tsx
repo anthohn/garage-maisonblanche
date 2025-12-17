@@ -1,65 +1,135 @@
 'use client'
-import Image from "next/image";
 
-// If you want to use a local image, place it in /public and import it here, e.g.
+import Image from "next/image";
 import Background from '@/public/photoGarage.png'
+import { motion } from "framer-motion";
+import { ArrowRight, Phone, MapPin } from "lucide-react";
+
+import ModernButton from "@/app/components/ui/ModernButton";
 
 export default function LandingSection() {
     return (
-        <section className="relative h-[850px] md:h-screen max-h-[1000px] flex items-center">
-            {/* Decorative background image - use Image with fill for responsive coverage */}
-            <Image
-                src={Background}
-                alt="photo du garage" // decorative image: empty alt so it's ignored by assistive tech
-                fill
-                className="object-cover object-center"
-                priority
-            />
-
-            {/* Overlay for contrast */}
-            {/* <div className="absolute inset-0 bg-black/40 dark:bg-black/50" aria-hidden="true" /> */}
-
-            {/* Content container */}
-            <div className="relative z-10 max-w-4xl px-6 ml-8 md:ml-16 text-left text-white">
-                <div className="bg-[#303F9F] p-10 opacity-90 rounded-2xl">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4">RÉPARATION ET MAINTENANCE TOUTES MARQUES</h1>
-                    <p className="text-lg md:text-xl mb-6">L&apos;avenir c&apos;est maintenant. Garage maison-blanche transforme vos abitions en réalités durables.</p>
-                </div>
-                {/* CTA buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                    <a href="#" className="inline-block bg-[#303F9F] text-white py-3 px-6 rounded-md font-semibold">LES SERVICES</a>
-                    <a href="#" className="inline-block border-2 border-white text-white py-3 px-6 rounded-md font-semibold">CONTACT {'->'}</a>
-                </div>
+        <section className="relative h-screen min-h-[800px] w-full overflow-hidden font-sans">
+            {/* Background Image with Gradient Overlay */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={Background}
+                    alt="Atelier Garage Maison Blanche"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                />
+                {/* Gradient overlay - Removed heavy black overlays, lighter gradient for text readability if needed */}
+                <div className="absolute inset-0 bg-linear-to-r from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
             </div>
 
-            {/* Floating shop button - bottom right */}
-            <div className="absolute bottom-6 right-6 z-20">
-                <a href="#" className="flex items-center bg-white rounded-xl shadow-lg py-2 px-4 max-w-xs hover:shadow-xl hover:scale-105 transition-all duration-700 ease-in-out transform">
-                    {/* Icon/Logo section */}
-                    <div className="rounded-lg p-2 mr-4 flex-shrink-0">
-                        <Image
-                            src="/logoStation.png"
-                            alt="Logo Station"
-                            width={70}
-                            height={70}
-                            className="object-contain"
-                        />
-                    </div>
-                    {/* Text content */}
-                    <div className="flex-1 min-w-0">
-                        <div className="text-lg font-semibold text-gray-900 truncate">Vers le shop</div>
-                        <div className="text-md text-sm text-gray-600 truncate">Station essence</div>
-                        <div className="text-md text-gray-500 truncate">Chancy, Genève</div>
-                    </div>
-                    {/* Arrow icon */}
-                    <div className="ml-3 flex-shrink-0">
-                        <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z" />
-                            </svg>
+            {/* Main Content Container */}
+            <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
+
+                {/* Center-Left: Headline & CTA */}
+                <div className="max-w-2xl mt-[-50px]"> {/* Slight negative margin to offset visual center */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <h2 className="text-white/90 font-medium tracking-wide mb-4">GARAGE MAISON-BLANCHE SA</h2>
+                        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                            Réparation et Maintenance <br />
+                            <span className="">Toutes Marques</span>
+                        </h1>
+                        <p className="text-xl text-gray-100 mb-10 leading-relaxed max-w-xl drop-shadow-md">
+                            L&apos;avenir c&apos;est maintenant. Nous transformons vos ambitions en réalités durables avec une expertise multimarque de pointe.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-8 items-center flex-wrap">
+                            {/* <ModernButton
+                                href="#"
+                                variant="primary"
+                                className="shadow-lg hover:shadow-blue-500/30"
+                            >
+                                Prendre Rendez-vous
+                            </ModernButton> */}
+
+                            {/* Phone CTA */}
+                            <ModernButton
+                                href="tel:+41227560404"
+                                variant="primary"
+                                className="rounded-full! px-6"
+                                icon={<span className="text-white bg-transparent rounded-full"><Phone className="w-6 h-6" /></span>}
+                                showArrow={false}
+                            >
+                                Prendre Rendez-vous
+                            </ModernButton>
+                            <ModernButton
+                                href="https://www.google.com/maps/search/?api=1&query=Garage+Maison-Blanche+500+Route+de+Chancy+1284+Chancy"
+                                variant="glass"
+                                className="rounded-full! px-6"
+                                icon={<span className="text-white bg-transparent rounded-full"><MapPin className="w-6 h-6" /></span>}
+                                showArrow={false}
+                            >
+                                Itinéraire
+                            </ModernButton>
                         </div>
-                    </div>
-                </a>
+                    </motion.div>
+                </div>
+
+                {/* Bottom Left: Stats */}
+                <div className="absolute bottom-12 left-6 md:left-12 flex gap-8 md:gap-16 text-white">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.4, duration: 0.6 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">15+</div>
+                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Années d&apos;Expérience</div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5, duration: 0.6 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">5k+</div>
+                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Réparations</div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.6, duration: 0.6 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">100%</div>
+                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Satisfaction</div>
+                    </motion.div>
+                </div>
+
+                {/* Bottom Right: Feature Card (Glassmorphism) */}
+                <motion.div
+                    className="absolute bottom-12 right-6 md:right-12 z-20 hidden md:block"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
+                >
+                    <a href="#" className="block w-80 bg-black/40 border border-white/10 rounded-3xl p-6 hover:bg-black/50 transition-all group shadow-2xl">
+                        <div className="flex items-start justify-between mb-4">
+                            {/* Icon container matching inspiration style more closely - clean rounded square or circle without heavy bg if image is sufficient */}
+                            <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-white/10 shadow-inner">
+                                <Image
+                                    src="/logoStation.png"
+                                    alt="Logo Station"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <ArrowRight className="text-white w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300 transform translate-x-1" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2 tracking-wide">Station Service & Shop</h3>
+                        <p className="text-sm text-gray-300 leading-relaxed">
+                            Faites le plein et profitez de notre boutique. Ouvert 7j/7.
+                        </p>
+                    </a>
+                </motion.div>
+
             </div>
         </section>
     );
