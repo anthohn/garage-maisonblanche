@@ -39,50 +39,7 @@ export default function ServicesPage() {
         { icon: Car, title: "Prise en charge carrosserie", image: "/services/bodywork.png" }
     ];
 
-    const featuredServices = services.filter(s => s.featured);
     const otherServices = services.filter(s => !s.featured);
-    // const services = [
-    //     {
-    //         icon: "⚙️",
-    //         title: "Préparation Expertise",
-    //         description: "Préparation minutieuse et présentation soignée pour une expertise réussie."
-    //     },
-    //     {
-    //         icon: "🔧",
-    //         title: "Entretien Écologique",
-    //         description: "Entretien de votre véhicule en profondeur et optimisation de la climatisation pour votre confort."
-    //     },
-    //     {
-    //         icon: "🔌",
-    //         title: "Diagnostic Électrique",
-    //         description: "Analyse complète des systèmes électroniques et réparations électriques fiables."
-    //     },
-    //     {
-    //         icon: "🛠️",
-    //         title: "Freins Démarrage",
-    //         description: "Maintenance complète des freins, restauration des disques et réparation des systèmes de démarrage."
-    //     },
-    //     {
-    //         icon: "🦷",
-    //         title: "Vitrage Pneumatiques",
-    //         description: "Solutions rapides pour vitrage, pneus de toutes marques et équilibrage parfait."
-    //     },
-    //     {
-    //         icon: "🚗",
-    //         title: "Suspension Stockage",
-    //         description: "Stockage sécurisé, entretien d'échappement et amélioration de la suspension."
-    //     },
-    //     {
-    //         icon: "🔩",
-    //         title: "Multi-Marque Pièces",
-    //         description: "Expertise sur toutes marques avec remplacement de courroie et embrayage de qualité."
-    //     },
-    //     {
-    //         icon: "🔋",
-    //         title: "Batterie Carrosserie",
-    //         description: "Remplacement de batterie performant et réparations complètes de carrosserie."
-    //     }
-    // ];
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -158,7 +115,7 @@ export default function ServicesPage() {
                         {/* Anthony Legrand */}
                         <div className="group relative bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                             <div className="relative mb-6">
-                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200">
+                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-linear-to-br from-blue-100 to-blue-200">
                                     <Image
                                         src="/team/Anthony L.JPG"
                                         alt="Anthony Legrand - Responsable qualité"
@@ -168,7 +125,7 @@ export default function ServicesPage() {
                                         priority={false}
                                     />
                                     {/* Overlay effet */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
                             <div className="text-center">
@@ -180,7 +137,7 @@ export default function ServicesPage() {
                         {/* Quentin Weiss */}
                         <div className="group relative bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                             <div className="relative mb-6">
-                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200">
+                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-linear-to-br from-blue-100 to-blue-200">
                                     <Image
                                         src="/team/Quentin Weiss.JPG"
                                         alt="Quentin Weiss - Responsable qualité"
@@ -189,7 +146,7 @@ export default function ServicesPage() {
                                         quality={95}
                                         priority={false}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
                             <div className="text-center">
@@ -201,11 +158,11 @@ export default function ServicesPage() {
                         {/* Jean-François Höhn */}
                         <div className="group relative bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                             <div className="relative mb-6">
-                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200">
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-linear-to-br from-blue-100 to-blue-200">
+                                    <div className="w-full h-full bg-linear-to-br from-gray-300 to-gray-400 flex items-center justify-center">
                                         <span className="text-gray-600 text-sm">Photo Jean-François</span>
                                     </div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
                             <div className="text-center">
@@ -217,11 +174,11 @@ export default function ServicesPage() {
                         {/* Miguel Teixeira */}
                         <div className="group relative bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                             <div className="relative mb-6">
-                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-gradient-to-br from-blue-100 to-blue-200">
-                                    <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
+                                <div className="relative w-full h-56 rounded-lg overflow-hidden bg-linear-to-br from-blue-100 to-blue-200">
+                                    <div className="w-full h-full bg-linear-to-br from-gray-300 to-gray-400 flex items-center justify-center">
                                         <span className="text-gray-600 text-sm">Photo Miguel</span>
                                     </div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
                             </div>
                             <div className="text-center">
@@ -297,7 +254,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Véhicules de prêt Section - Design cohérent */}
-            <div className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+            <div className="py-12 bg-linear-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
                 {/* Éléments décoratifs de fond */}
                 <div className="absolute inset-0 opacity-5">
                     <div className="absolute top-20 left-20 w-64 h-64 bg-[#303F9F] rounded-full blur-3xl"></div>
@@ -331,7 +288,7 @@ export default function ServicesPage() {
                                     priority={false}
                                 />
                                 {/* Overlay gradient pour améliorer la lisibilité */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+                                <div className="absolute inset-0 bg-linear-to-r from-black/20 to-transparent"></div>
 
                                 {/* Badge prix flottant */}
                                 <div className="absolute top-6 right-6 bg-[#303F9F] text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
@@ -345,7 +302,7 @@ export default function ServicesPage() {
                                     {/* Points forts avec icônes */}
                                     <div className="space-y-4">
                                         <div className="flex items-start space-x-3">
-                                            <div className="w-6 h-6 min-w-6 min-h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                                            <div className="w-6 h-6 min-w-6 min-h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 shrink-0">
                                                 <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                 </svg>
@@ -358,7 +315,7 @@ export default function ServicesPage() {
                                         </div>
 
                                         <div className="flex items-start space-x-3">
-                                            <div className="w-6 h-6 min-w-6 min-h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                                            <div className="w-6 h-6 min-w-6 min-h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5 shrink-0">
                                                 <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                 </svg>

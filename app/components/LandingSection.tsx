@@ -24,7 +24,7 @@ export default function LandingSection() {
                 />
                 {/* Gradient overlay - Removed heavy black overlays, lighter gradient for text readability if needed */}
                 <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-transparent" />
-                {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" /> */}
+                {/* <div className="absolute inset-0 bg-linear-to-t from-blue-900/50 via-transparent to-transparent" /> */}
             </div>
             <SnowEffect />
 
@@ -42,9 +42,9 @@ export default function LandingSection() {
                             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                             <span className="text-blue-100 text-sm font-semibold tracking-wider uppercase">Garage Maison-Blanche SA</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight drop-shadow-lg">
                             Réparation et Maintenance <br />
-                            <span className="text-4xl md:text-6xl font-semibold">Toutes Marques</span>
+                            <span className="text-3xl md:text-5xl font-semibold">Toutes Marques</span>
                         </h1>
                         <p className="text-xl text-gray-100 mb-10 leading-relaxed max-w-xl drop-shadow-md">
                             L&apos;avenir c&apos;est maintenant. Nous transformons vos ambitions en réalités durables avec une expertise multimarque de pointe.
