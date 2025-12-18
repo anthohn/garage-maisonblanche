@@ -9,28 +9,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: 'https://garage-maisonblanche.ch/station',
+            url: 'https://garage-maisonblanche.ch/services',
             lastModified: new Date(),
             changeFrequency: 'monthly',
-            priority: 0.8,
+            priority: 0.9,
         },
         {
-            url: 'https://garage-maisonblanche.ch/garage',
+            url: 'https://garage-maisonblanche.ch/vehicules',
             lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
+            changeFrequency: 'weekly',
+            priority: 0.9,
         },
         {
-            url: 'https://garage-maisonblanche.ch/shop',
+            url: 'https://garage-maisonblanche.ch/contact',
             lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://garage-maisonblanche.ch/lavage',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
+            changeFrequency: 'yearly',
+            priority: 0.7,
         },
     ]
 }
