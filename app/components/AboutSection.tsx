@@ -15,8 +15,8 @@ export default function PresentationSection() {
                                 alt="Garage Maison-Blanche atelier"
                                 width={600}
                                 height={600}
-                                className="w-full h-[28rem] object-cover"
-                                quality={95}
+                                className="w-full h-112 object-cover"
+                                quality={80}
                                 priority={true}
                             />
                         </div>

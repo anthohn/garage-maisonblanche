@@ -3,12 +3,7 @@
 import Image from 'next/image';
 import ModernButton from '@/app/components/ui/ModernButton';
 import Badge from '@/app/components/ui/Badge';
-import {
-    Wrench, Leaf, Zap, Disc, CircleDot, Archive, Layers, Car,
-    Wind, ClipboardCheck, Droplets, Fan, Laptop, Battery,
-    Activity, Repeat, Settings, Warehouse, Scan, CheckCircle2,
-    ArrowRight
-} from 'lucide-react';
+import { Zap, Disc, CircleDot, Layers, Car, Wind, ClipboardCheck, Droplets, Fan, Laptop, Battery, Activity, Repeat, Settings, Warehouse, Scan } from 'lucide-react';
 import { motion } from "framer-motion";
 
 
@@ -291,7 +286,7 @@ export default function ServicesPage() {
                                 <div className="absolute inset-0 bg-linear-to-r from-black/20 to-transparent"></div>
 
                                 {/* Badge prix flottant */}
-                                <div className="absolute top-6 right-6 bg-[#303F9F] text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+                                <div className="absolute top-6 right-6 bg-[#303F9F] text-white px-4 py-2 rounded-full font-bold text-md shadow-lg">
                                     dès 30 CHF/jour
                                 </div>
                             </div>

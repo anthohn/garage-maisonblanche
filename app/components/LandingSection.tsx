@@ -87,15 +87,7 @@ export default function LandingSection() {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.4, duration: 0.6 }}
-                    >
-                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">15+</div>
-                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Années d&apos;Expérience</div>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 0.6 }}
+                        transition={{ delay: 0.5, duration: 1 }}
                     >
                         <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">5k+</div>
                         <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Réparations</div>
@@ -103,24 +95,32 @@ export default function LandingSection() {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6, duration: 0.6 }}
+                        transition={{ delay: 0.6, duration: 1 }}
                     >
-                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">100%</div>
-                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Satisfaction</div>
+                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">CarXpert</div>
+                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Partenaire</div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.7, duration: 1 }}
+                    >
+                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">15+</div>
+                        <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Années d&apos;Expérience</div>
                     </motion.div>
                 </div>
 
                 {/* Bottom Right: Feature Card (Glassmorphism) */}
                 <motion.div
-                    className="absolute bottom-12 right-6 md:right-12 z-20 hidden md:block"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.8, duration: 0.6 }}
+                    className="absolute bottom-12 right-6 md:right-12 z-20 hidden md:block hover:scale-105 transition-all duration-300"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 1 }}
                 >
-                    <a href="#" className="block w-80 bg-black/40 border border-white/10 rounded-3xl p-6 hover:bg-black/50 transition-all group shadow-2xl">
-                        <div className="flex items-start justify-between mb-4">
+                    <a href="#" className="block bg-black/40 border border-white/10 rounded-3xl p-4 hover:bg-black/50 transition-all group shadow-2xl">
+                        <div className="flex items-center justify-between gap-4">
                             {/* Icon container matching inspiration style more closely - clean rounded square or circle without heavy bg if image is sufficient */}
-                            <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-white/10 shadow-inner">
+                            <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-white/10 shadow-inner">
                                 <Image
                                     src="/logoStation.png"
                                     alt="Logo Station"
@@ -128,12 +128,14 @@ export default function LandingSection() {
                                     className="object-cover"
                                 />
                             </div>
-                            <ArrowRight className="text-white w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300 transform translate-x-1" />
+                            <div className="flex flex-col">
+                                <h3 className="text-xl font-bold text-white mb-2 tracking-wide">Station Service & Shop</h3>
+                                <p className="text-sm text-gray-300 leading-relaxed">
+                                    Faites le plein et profitez de notre boutique. Ouvert 7j/7.
+                                </p>
+                            </div>
+                            <ArrowRight className="text-white w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-300 transform translate-x-1" />
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-2 tracking-wide">Station Service & Shop</h3>
-                        <p className="text-sm text-gray-300 leading-relaxed">
-                            Faites le plein et profitez de notre boutique. Ouvert 7j/7.
-                        </p>
                     </a>
                 </motion.div>
 
