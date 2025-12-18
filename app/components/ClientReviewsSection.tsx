@@ -68,7 +68,7 @@ export default function ClientReviewsSection() {
     };
 
     return (
-        <section className="py-24 bg-linear-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+        <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
             {/* Éléments décoratifs de fond */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 right-20 w-64 h-64 bg-[#303F9F] rounded-full blur-3xl"></div>
@@ -107,52 +107,28 @@ export default function ClientReviewsSection() {
                     </div>
                 </div>
 
-                {/* Navigation moderne */}
-                <div className="flex justify-center mb-12">
-                    <div className="flex items-center bg-white rounded-full p-2 shadow-lg border border-gray-200">
-                        <button
-                            onClick={prevReview}
-                            className="w-12 h-12 bg-gray-100 hover:bg-[#303F9F] hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                            aria-label="Avis précédent"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
+                {/* Navigation Buttons + Grid Container */}
+                <div className="relative hidden md:block">
+                    {/* Bouton Précédent - Gauche */}
+                    <button
+                        onClick={prevReview}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 lg:-ml-12 z-20 w-12 h-12 bg-white hover:bg-[#303F9F] text-[#303F9F] hover:text-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 transition-all duration-300 transform hover:scale-110 cursor-pointer"
+                        aria-label="Avis précédent"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
 
-                        <div className="flex space-x-2 mx-4">
-                            {Array.from({ length: Math.ceil(reviews.length / 3) }, (_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setCurrentIndex(i * 3)}
-                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${Math.floor(currentIndex / 3) === i ? 'bg-[#303F9F] w-6' : 'bg-gray-300'
-                                        }`}
-                                />
-                            ))}
-                        </div>
-
-                        <button
-                            onClick={nextReview}
-                            className="w-12 h-12 bg-gray-100 hover:bg-[#303F9F] hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                            aria-label="Avis suivant"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                {/* Grid des avis - Desktop */}
-                <div className="hidden md:block">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Grid des avis */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                         {reviews.slice(currentIndex, currentIndex + 3).map((review, index) => (
                             <div
                                 key={`desktop-${currentIndex}-${index}`}
-                                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full flex flex-col"
                             >
                                 {/* Service badge */}
-                                <div className="inline-block bg-blue-100 text-[#303F9F] text-xs font-medium px-3 py-1 rounded-full mb-4">
+                                <div className="inline-block bg-blue-100 text-[#303F9F] text-xs font-medium px-3 py-1 rounded-full mb-4 self-start">
                                     {review.service}
                                 </div>
 
@@ -162,7 +138,7 @@ export default function ClientReviewsSection() {
                                 </div>
 
                                 {/* Quote avec icône */}
-                                <div className="relative mb-6">
+                                <div className="relative mb-6 flex-grow">
                                     <div className="absolute -top-2 -left-2 text-4xl text-[#303F9F] opacity-20">
                                         &ldquo;
                                     </div>
@@ -172,10 +148,7 @@ export default function ClientReviewsSection() {
                                 </div>
 
                                 {/* Author avec avatar */}
-                                <div className="flex items-center pt-4 border-t border-gray-100">
-                                    {/* <div className="w-12 h-12 bg-gradient-to-br from-[#303F9F] to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                                        {review.author.split(' ').map(n => n[0]).join('')}
-                                    </div> */}
+                                <div className="flex items-center pt-4 border-t border-gray-100 mt-auto">
                                     <div>
                                         <p className="font-semibold text-gray-900">{review.author}</p>
                                         <p className="text-sm text-gray-500">{review.date}</p>
@@ -184,6 +157,17 @@ export default function ClientReviewsSection() {
                             </div>
                         ))}
                     </div>
+
+                    {/* Bouton Suivant - Droite */}
+                    <button
+                        onClick={nextReview}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-12 z-20 w-12 h-12 bg-white hover:bg-[#303F9F] text-[#303F9F] hover:text-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 transition-all duration-300 transform hover:scale-110 cursor-pointer"
+                        aria-label="Avis suivant"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
                 </div>
 
                 {/* Version mobile */}
@@ -212,7 +196,7 @@ export default function ClientReviewsSection() {
                                 </div>
 
                                 <div className="flex items-center pt-4 border-t border-gray-100">
-                                    <div className="w-10 h-10 bg-linear-to-br from-[#303F9F] to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                    <div className="w-10 h-10 bg-gradient-to-br from-[#303F9F] to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                                         {review.author.split(' ').map(n => n[0]).join('')}
                                     </div>
                                     <div>
