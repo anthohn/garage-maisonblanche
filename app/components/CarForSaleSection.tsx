@@ -26,25 +26,38 @@ export default function CarForSaleSection() {
                 </div>
 
                 {/* Cars Grid avec design premium */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    {featuredCars.map((car, index) => (
-                        <CarCard
-                            key={car.id}
-                            car={car}
-                            priority={index < 2}
-                        />
-                    ))}
-                </div>
+                {featuredCars.length > 0 ? (
+                    <>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                            {featuredCars.map((car, index) => (
+                                <CarCard
+                                    key={car.id}
+                                    car={car}
+                                    priority={index < 2}
+                                />
+                            ))}
+                        </div>
 
-                {/* Call to Action amélioré */}
-                <div className="text-center">
-                    <ModernButton href="/vehicules" size="lg">
-                        Voir tous nos véhicules
-                    </ModernButton>
-                    <p className="text-sm text-gray-500 mt-4">
-                        Plus de {carsData.length} véhicules disponibles
-                    </p>
-                </div>
+                        {/* Call to Action amélioré */}
+                        <div className="text-center">
+                            <ModernButton href="/vehicules" size="lg">
+                                Voir tous nos véhicules
+                            </ModernButton>
+                            <p className="text-sm text-gray-500 mt-4">
+                                Plus de {carsData.length} véhicules disponibles
+                            </p>
+                        </div>
+                    </>
+                ) : (
+                    <div className="text-center py-12 bg-gray-50 rounded-2xl">
+                        <p className="text-xl text-gray-600 mb-6">
+                            Nous n&apos;avons pas de véhicules affichés en ligne pour le moment.
+                        </p>
+                        <ModernButton href="/contact" size="lg">
+                            Contactez-nous
+                        </ModernButton>
+                    </div>
+                )}
             </div>
         </section>
     );
