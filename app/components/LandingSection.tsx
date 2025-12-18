@@ -11,7 +11,7 @@ import ModernButton from "@/app/components/ui/ModernButton";
 
 export default function LandingSection() {
     return (
-        <section className="relative h-screen min-h-[800px] w-full overflow-hidden font-sans">
+        <section className="relative h-screen w-full overflow-hidden font-sans">
             <SnowEffect />
             {/* Background Image with Gradient Overlay */}
             <div className="absolute inset-0 z-0">
@@ -23,8 +23,8 @@ export default function LandingSection() {
                     priority
                 />
                 {/* Gradient overlay - Removed heavy black overlays, lighter gradient for text readability if needed */}
-                <div className="absolute inset-0 bg-linear-to-r from-black/30 via-transparent to-transparent" />
-                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-transparent" />
+                {/* <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" /> */}
             </div>
             <SnowEffect />
 

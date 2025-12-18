@@ -3,55 +3,91 @@
 import Image from 'next/image';
 import ModernButton from '@/app/components/ui/ModernButton';
 import Badge from '@/app/components/ui/Badge';
+import {
+    Wrench, Leaf, Zap, Disc, CircleDot, Archive, Layers, Car,
+    Wind, ClipboardCheck, Droplets, Fan, Laptop, Battery,
+    Activity, Repeat, Settings, Warehouse, Scan, CheckCircle2,
+    ArrowRight
+} from 'lucide-react';
+import { motion } from "framer-motion";
+
 
 export default function ServicesPage() {
     const services = [
-        {
-            icon: "⚙️",
-            title: "Préparation Expertise",
-            description: "Préparation minutieuse et présentation soignée pour une expertise réussie."
-        },
-        {
-            icon: "🔧",
-            title: "Entretien Écologique",
-            description: "Entretien de votre véhicule en profondeur et optimisation de la climatisation pour votre confort."
-        },
-        {
-            icon: "🔌",
-            title: "Diagnostic Électrique",
-            description: "Analyse complète des systèmes électroniques et réparations électriques fiables."
-        },
-        {
-            icon: "🛠️",
-            title: "Freins Démarrage",
-            description: "Maintenance complète des freins, restauration des disques et réparation des systèmes de démarrage."
-        },
-        {
-            icon: "🦷",
-            title: "Vitrage Pneumatiques",
-            description: "Solutions rapides pour vitrage, pneus de toutes marques et équilibrage parfait."
-        },
-        {
-            icon: "🚗",
-            title: "Suspension Stockage",
-            description: "Stockage sécurisé, entretien d'échappement et amélioration de la suspension."
-        },
-        {
-            icon: "🔩",
-            title: "Multi-Marque Pièces",
-            description: "Expertise sur toutes marques avec remplacement de courroie et embrayage de qualité."
-        },
-        {
-            icon: "🔋",
-            title: "Batterie Carrosserie",
-            description: "Remplacement de batterie performant et réparations complètes de carrosserie."
-        }
+        // Top 6 Featured Services
+        { icon: ClipboardCheck, title: "Préparation expertise", image: "/services/expertise.png", featured: true, description: "Préparation minutieuse pour une expertise réussie." },
+        { icon: Fan, title: "Service climatisation", image: "/services/ac.png", featured: true, description: "Entretien et recharge pour un air sain et frais." },
+        { icon: Disc, title: "Freins", image: "/services/brakes.png", featured: true, description: "Sécurité maximale avec nos forfaits freinage." },
+        { icon: Laptop, title: "Diagnostique électronique", image: "/services/diagnostic.png", featured: true, description: "Analyse précise avec valise multi-marques." },
+        { icon: CircleDot, title: "Pneus toutes marques", image: "/services/tires.png", featured: true, description: "Vente, montage et équilibrage de vos pneus." },
+        { icon: Repeat, title: "Courroie de distribution", image: "/services/timing-belt.png", featured: true, description: "Remplacement préventif pour la santé du moteur." },
+
+        // Other Services
+        { icon: Wind, title: "Contrôle antipollution", image: "/services/pollution.png" },
+        { icon: Droplets, title: "Lavage châssis moteur", image: "/services/washing.png" },
+        { icon: Zap, title: "Electricité", image: "/services/electricity.png" },
+        { icon: Disc, title: "Rectification disque de frein", image: "/services/brakes-fix.png" },
+        { icon: Zap, title: "Alternateur - Démarreur", image: "/services/alternator.png" },
+        { icon: Scan, title: "Remplacement pare-brise", image: "/services/windshield.png" },
+        { icon: Settings, title: "Montage équilibrage", image: "/services/mounting.png" },
+        { icon: Warehouse, title: "Gardiennage pneus-roues", image: "/services/storage.png" },
+        { icon: Wind, title: "Echappement", image: "/services/exhaust.png" },
+        { icon: Activity, title: "Amortisseurs", image: "/services/suspension.png" },
+        { icon: Layers, title: "Service multi-marque", image: "/services/multibrand.png" },
+        { icon: CircleDot, title: "Embrayage", image: "/services/clutch.png" },
+        { icon: Battery, title: "Batterie", image: "/services/battery.png" },
+        { icon: Car, title: "Prise en charge carrosserie", image: "/services/bodywork.png" }
     ];
+
+    const featuredServices = services.filter(s => s.featured);
+    const otherServices = services.filter(s => !s.featured);
+    // const services = [
+    //     {
+    //         icon: "⚙️",
+    //         title: "Préparation Expertise",
+    //         description: "Préparation minutieuse et présentation soignée pour une expertise réussie."
+    //     },
+    //     {
+    //         icon: "🔧",
+    //         title: "Entretien Écologique",
+    //         description: "Entretien de votre véhicule en profondeur et optimisation de la climatisation pour votre confort."
+    //     },
+    //     {
+    //         icon: "🔌",
+    //         title: "Diagnostic Électrique",
+    //         description: "Analyse complète des systèmes électroniques et réparations électriques fiables."
+    //     },
+    //     {
+    //         icon: "🛠️",
+    //         title: "Freins Démarrage",
+    //         description: "Maintenance complète des freins, restauration des disques et réparation des systèmes de démarrage."
+    //     },
+    //     {
+    //         icon: "🦷",
+    //         title: "Vitrage Pneumatiques",
+    //         description: "Solutions rapides pour vitrage, pneus de toutes marques et équilibrage parfait."
+    //     },
+    //     {
+    //         icon: "🚗",
+    //         title: "Suspension Stockage",
+    //         description: "Stockage sécurisé, entretien d'échappement et amélioration de la suspension."
+    //     },
+    //     {
+    //         icon: "🔩",
+    //         title: "Multi-Marque Pièces",
+    //         description: "Expertise sur toutes marques avec remplacement de courroie et embrayage de qualité."
+    //     },
+    //     {
+    //         icon: "🔋",
+    //         title: "Batterie Carrosserie",
+    //         description: "Remplacement de batterie performant et réparations complètes de carrosserie."
+    //     }
+    // ];
 
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section avec design moderne */}
-            <div className="relative py-24 pt-32 bg-gray-50 overflow-hidden">
+            <div className="relative py-12 pt-32 bg-gray-50 overflow-hidden">
                 {/* Éléments décoratifs */}
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute top-20 right-20 w-64 h-64 bg-[#303F9F] rounded-full blur-3xl"></div>
@@ -71,65 +107,38 @@ export default function ServicesPage() {
                 </div>
             </div>
 
-            {/* Services Grid Section - Design premium */}
-            <div className="py-24 bg-gray-50 relative">
-                {/* Éléments décoratifs de fond */}
-                {/* <div className="absolute inset-0 opacity-30">
-                    <div className="absolute top-20 right-20 w-32 h-32 bg-[#303F9F] rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-40 left-20 w-24 h-24 bg-blue-400 rounded-full blur-xl"></div>
-                </div> */}
-
-                <div className="max-w-7xl mx-auto px-6 relative z-10">
-                    {/* Services Grid avec design moderne */}
-                    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        
-                    </div> */}
-
-                    {/* CTA Section avec design premium */}
-                    <div className="mt-20 text-center">
-                        <div className="bg-white rounded-3xl p-12 shadow-2xl border border-gray-100 max-w-4xl mx-auto">
-                            <div className="mb-8">
-                                <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                                    Prêt à confier votre véhicule ?
-                                </h3>
-                                <p className="text-xl text-gray-600">
-                                    Demandez un devis personnalisé et bénéficiez de notre expertise professionnelle
-                                </p>
-                            </div>
-
-                            <div className="flex justify-center">
-                                <ModernButton href="/contact">
-                                    Demander un devis
-                                </ModernButton>
-                            </div>
-
-                            <div className="mt-8 flex items-center justify-center space-x-8 text-sm text-gray-500">
-                                <div className="flex items-center space-x-2">
-                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                    <span>Devis gratuit</span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                    <span>Intervention rapide</span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                    <span>Garantie qualité</span>
-                                </div>
-                            </div>
+            {/* 2. OTHER SERVICES (Compact List) */}
+            <div className="py-12 bg-gray-50">
+                <div className="max-w-6xl mx-auto px-6">
+                    <section className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tous nos services</h2>
+                            <p className="text-gray-500">Une expertise complète pour chaque besoin de votre véhicule</p>
                         </div>
-                    </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {otherServices.map((service, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    className="flex items-center p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors group cursor-default"
+                                >
+                                    <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 group-hover:text-[#303F9F] group-hover:scale-110 transition-all mr-4 shrink-0">
+                                        <service.icon className="w-5 h-5" />
+                                    </div>
+                                    <span className="font-medium text-gray-700 group-hover:text-gray-900">{service.title}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </section>
                 </div>
             </div>
 
+
             {/* Notre équipe Section - Design moderne */}
-            <div className="py-24 bg-gray-50">
+            <div className="py-12 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-6">
                     {/* Header moderne avec design asymétrique */}
                     <div className="text-center mb-16">
@@ -242,8 +251,53 @@ export default function ServicesPage() {
                 </div>
             </div>
 
+            {/* CTA Section avec design premium */}
+            <div className="py-12 bg-gray-50 relative">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="mt-20 text-center">
+                        <div className="bg-white rounded-3xl p-12 shadow-2xl border border-gray-100 max-w-4xl mx-auto">
+                            <div className="mb-8">
+                                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                                    Prêt à confier votre véhicule ?
+                                </h3>
+                                <p className="text-xl text-gray-600">
+                                    Demandez un devis personnalisé et bénéficiez de notre expertise professionnelle
+                                </p>
+                            </div>
+
+                            <div className="flex justify-center">
+                                <ModernButton href="/contact">
+                                    Demander un devis
+                                </ModernButton>
+                            </div>
+
+                            <div className="mt-8 flex items-center justify-center space-x-8 text-sm text-gray-500">
+                                <div className="flex items-center space-x-2">
+                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>Devis gratuit</span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>Intervention rapide</span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>Garantie qualité</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* Véhicules de prêt Section - Design cohérent */}
-            <div className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+            <div className="py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
                 {/* Éléments décoratifs de fond */}
                 <div className="absolute inset-0 opacity-5">
                     <div className="absolute top-20 left-20 w-64 h-64 bg-[#303F9F] rounded-full blur-3xl"></div>

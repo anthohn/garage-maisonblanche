@@ -58,7 +58,7 @@ export default function Garage() {
                             </div>
 
                             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 flex gap-4">
-                                <div className="flex-shrink-0">
+                                <div className="shrink-0">
                                     <i className="flaticon-car-4 text-3xl text-blue-500"></i>
                                 </div>
                                 <div>
@@ -78,7 +78,7 @@ export default function Garage() {
             </section>
 
             {/* Services List Section */}
-            <section className="py-16 bg-gray-100 bg-no-repeat bg-right-bottom" style={{ backgroundImage: 'url("/img/bg2.png")' }}>
+            <section className="py-16 bg-gray-100 bg-no-repeat bg-bottom-right" style={{ backgroundImage: 'url("/img/bg2.png")' }}>
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                         {/* Left Column */}
