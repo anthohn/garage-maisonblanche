@@ -57,7 +57,6 @@ export default function Footer() {
                                 <div>
                                     <h4 className="font-semibold">Téléphone</h4>
                                     <a href="tel:+41227560404" className="text-sm hover:text-blue-600 transition-colors block">+41 22 756 04 04</a>
-                                    <span className="text-xs text-gray-400">Fax: +41 22 756 15 58</span>
                                 </div>
                             </div>
 
