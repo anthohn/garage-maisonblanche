@@ -72,14 +72,14 @@ export default function Header() {
                                 <OpenStatus />
                             </div>
 
-                            <ModernButton
+                            {/* <ModernButton
                                 href="/contact"
                                 size="sm"
                                 className="text-sm"
                                 showArrow={false}
                             >
                                 Contact
-                            </ModernButton>
+                            </ModernButton> */}
 
                             {/* Hamburger Menu Button for mobile */}
                             <div className="flex md:hidden">
