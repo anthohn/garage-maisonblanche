@@ -12,6 +12,8 @@ interface ModernButtonProps {
     size?: 'sm' | 'md' | 'lg' | 'icon';
     showArrow?: boolean;
     icon?: React.ReactNode;
+    type?: 'button' | 'submit' | 'reset';
+    target?: string;
 }
 
 export default function ModernButton({
@@ -23,7 +25,9 @@ export default function ModernButton({
     variant = 'primary',
     size = 'lg',
     showArrow = true,
-    icon
+    icon,
+    type = 'button',
+    target
 }: ModernButtonProps) {
     const baseClasses = "group relative font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer inline-flex items-center justify-center";
 
@@ -66,7 +70,7 @@ export default function ModernButton({
     // Si href est fourni, utiliser Link de Next.js
     if (href && !disabled) {
         return (
-            <Link href={href} className={classes}>
+            <Link href={href} className={classes} target={target}>
                 {content}
             </Link>
         );
@@ -75,6 +79,7 @@ export default function ModernButton({
     // Sinon, utiliser un bouton classique
     return (
         <button
+            type={type}
             className={classes}
             onClick={onClick}
             disabled={disabled}

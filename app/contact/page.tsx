@@ -24,23 +24,15 @@ export default function ContactPage() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Traitement du formulaire ici
-        console.log('Form submitted:', formData);
     };
 
     const handleNewsletterSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Traitement de l'inscription newsletter
-        console.log('Newsletter subscription:', newsletterEmail);
     };
 
     return (
         <div className="min-h-screen bg-linear-to-br from-gray-50 via-gray-100 to-blue-50">
-            {/* Éléments décoratifs */}
-            {/* <div className="fixed inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 right-20 w-72 h-72 bg-[#303F9F] rounded-full blur-3xl opacity-10"></div>
-                <div className="absolute bottom-20 left-20 w-48 h-48 bg-blue-500 rounded-full blur-2xl opacity-15"></div>
-            </div> */}
+
 
             {/* Header Section */}
             <div className="relative z-10 pt-32">
@@ -171,6 +163,7 @@ export default function ContactPage() {
                                     size="md"
                                     className="w-full"
                                     showArrow={false}
+                                    type="submit"
                                 >
                                     S&apos;abonner
                                 </ModernButton>

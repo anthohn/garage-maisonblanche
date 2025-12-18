@@ -14,11 +14,14 @@ export default function SnowEffect() {
             duration: `${Math.random() * 10 + 20}s`, // 5s to 10s
             delay: `-${Math.random() * 10}s`, // Start mid-animation
         }));
-        setFlakes(newFlakes);
+
+        requestAnimationFrame(() => {
+            setFlakes(newFlakes);
+        });
     }, []);
 
     return (
-        <div className="absolute inset-0 pointer-events-none z-[5] overflow-hidden" aria-hidden="true">
+        <div className="absolute inset-0 pointer-events-none z-5 overflow-hidden" aria-hidden="true">
             <style jsx>{`
                 @keyframes snowfall {
                     0% {

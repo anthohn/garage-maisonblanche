@@ -4,7 +4,6 @@ import Image from "next/image";
 import Background from '@/public/photoGarage.png'
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
-// import SantaHat from '@/public/santaHat.png'
 import SnowEffect from "@/app/components/ui/SnowEffect";
 
 import ModernButton from "@/app/components/ui/ModernButton";
@@ -75,6 +74,7 @@ export default function LandingSection() {
                                 className="rounded-full! px-6"
                                 icon={<span className="text-white bg-transparent rounded-full"><MapPin className="w-6 h-6" /></span>}
                                 showArrow={false}
+                                target="_blank"
                             >
                                 Itinéraire
                             </ModernButton>
