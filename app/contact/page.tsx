@@ -37,9 +37,9 @@ export default function ContactPage() {
             {/* Header Section */}
             <div className="relative z-10 pt-32">
                 <div className="max-w-4xl mx-auto px-6 text-center">
-                    <Badge className="mb-6">
+                    {/* <Badge className="mb-6">
                         Contactez-nous
-                    </Badge>
+                    </Badge> */}
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact</h1>
                     <p className="text-xl text-gray-600 leading-relaxed">
                         Où et comment nous contacter pour tous vos besoins automobiles
@@ -49,13 +49,11 @@ export default function ContactPage() {
 
             {/* Main Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Contact Form - Left Side */}
+                {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2">
                         <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-8">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
                             <form onSubmit={handleSubmit} className="space-y-6">
-                                {/* First Row - Nom & Prénom */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <input
@@ -81,7 +79,6 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                {/* Second Row - Email & Téléphone */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <input
@@ -106,7 +103,6 @@ export default function ContactPage() {
                                     </div>
                                 </div>
 
-                                {/* Message */}
                                 <div>
                                     <textarea
                                         name="message"
@@ -119,7 +115,6 @@ export default function ContactPage() {
                                     />
                                 </div>
 
-                                {/* Submit Button */}
                                 <div>
                                     <ModernButton
                                         onClick={() => { }}
@@ -133,7 +128,6 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* Newsletter Section - Right Side */}
                     <div className="lg:col-span-1">
                         <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-8">
                             <div className="text-center mb-6">
@@ -170,14 +164,12 @@ export default function ContactPage() {
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Map Section */}
-                <div className="mt-16">
-                    <Badge>Localisation</Badge>
-
+                <div className="mb-16">
                     {/* Contact Info */}
-                    <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-8 mt-8">
+                    <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-8 my-8">
                         <h3 className="text-2xl font-bold text-gray-900 mb-6">Venez nous rendre visite</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="flex items-start space-x-3">
@@ -208,7 +200,7 @@ export default function ContactPage() {
                                     </svg>
                                     <div>
                                         <p className="font-semibold text-gray-900">Téléphone</p>
-                                        <p className="text-gray-600">+41 22 756 04 00</p>
+                                        <a href="tel:+41227560404" className="text-gray-600 hover:text-blue-600 transition-colors">+41 22 756 04 04</a>
                                     </div>
                                 </div>
 
@@ -219,12 +211,15 @@ export default function ContactPage() {
                                     </svg>
                                     <div>
                                         <p className="font-semibold text-gray-900">Email</p>
-                                        <p className="text-gray-600">garage.maisonblanche@bluewin.ch</p>
+                                        <a href="mailto:atelier@garage-maisonblanche.ch" className="text-gray-600 hover:text-blue-600 transition-colors">atelier@garage-maisonblanche.ch</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <Badge>Localisation</Badge>
+
 
                     {/* Map Full Width */}
                     <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-2 mt-8">
