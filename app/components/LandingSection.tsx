@@ -20,6 +20,8 @@ export default function LandingSection() {
                     fill
                     className="object-cover object-center"
                     priority
+                    placeholder="blur"
+                    sizes="100vw"
                 />
                 {/* Gradient overlay - Removed heavy black overlays, lighter gradient for text readability if needed */}
                 <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-transparent" />

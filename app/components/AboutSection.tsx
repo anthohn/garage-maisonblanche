@@ -17,7 +17,6 @@ export default function PresentationSection() {
                                 height={600}
                                 className="w-full h-112 object-cover"
                                 quality={80}
-                                priority={true}
                             />
                         </div>
                         {/* Floating info cards */}

@@ -6,6 +6,7 @@ const nextConfig = {
     // Configuration des images si nécessaire (domaines autorisés, etc.)
     images: {
         // domains: ['example.com'],
+        formats: ['image/avif', 'image/webp'],
     },
 };
 
