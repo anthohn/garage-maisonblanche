@@ -117,7 +117,7 @@ export default function LandingSection() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
                 >
-                    <a href="#" className="block bg-black/40 border border-white/10 rounded-3xl p-4 hover:bg-black/50 transition-all group shadow-2xl">
+                    <a href="https://station-maisonblanche.ch/" target="_blank" className="block bg-black/40 border border-white/10 rounded-3xl p-4 hover:bg-black/50 transition-all group shadow-2xl">
                         <div className="flex items-center justify-between gap-4">
                             {/* Icon container matching inspiration style more closely - clean rounded square or circle without heavy bg if image is sufficient */}
                             <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-white/10 shadow-inner">
