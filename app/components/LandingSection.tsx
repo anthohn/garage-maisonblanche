@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import Background from '@/public/photoGarage.png'
+import Background from '@/public/photoGarage-hiver3.png'
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
 import SnowEffect from "@/app/components/ui/SnowEffect";
@@ -18,7 +18,7 @@ export default function LandingSection() {
                     src={Background}
                     alt="Atelier Garage Maison Blanche"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center blur-[2px]"
                     priority
                     placeholder="blur"
                     sizes="100vw"
