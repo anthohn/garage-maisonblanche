@@ -26,7 +26,7 @@ export default function PresentationSection() {
                         </div>
                         <div className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 max-w-xs">
                             <h4 className="font-bold text-gray-900 text-sm mb-1">Expertise Toutes Marques</h4>
-                            <p className="text-xs text-gray-600">Plus de 20 ans d&apos;expérience dans la réparation automobile</p>
+                            <p className="text-xs text-gray-600">Plus de 25 ans d&apos;expérience dans la réparation automobile</p>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@ export default function PresentationSection() {
                             À PROPOS
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Expert en maintenance automobile depuis 1995
+                            Expert en maintenance automobile depuis 1997
                         </h2>
                         <p className="text-lg text-gray-600 mb-8">
                             Au Garage Maison-Blanche, nous combinons expertise traditionnelle et technologies modernes

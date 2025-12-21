@@ -41,13 +41,13 @@ export default function LogoBandSection() {
             description: "Formation continue et certification",
             url: "https://www.formationprof.ch/fr"
         },
-        {
-            name: "Loterie Romande",
-            src: "/partners/loterie-romande.png",
-            alt: "Loterie Romande",
-            description: "Partenaire local de confiance",
-            url: "https://www.loro.ch"
-        }
+        // {
+        //     name: "Loterie Romande",
+        //     src: "/partners/loterie-romande.png",
+        //     alt: "Loterie Romande",
+        //     description: "Partenaire local de confiance",
+        //     url: "https://www.loro.ch"
+        // }
     ];
 
     return (

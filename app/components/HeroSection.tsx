@@ -82,7 +82,7 @@ export default function HeroSection() {
                     className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-white/20"
                 >
                     <div>
-                        <div className="text-3xl md:text-4xl font-bold text-[#001F3F]">15+</div>
+                        <div className="text-3xl md:text-4xl font-bold text-[#001F3F]">25+</div>
                         <p className="text-sm text-[#6B7280] mt-2">Années d&apos;expérience</p>
                     </div>
                     <div>

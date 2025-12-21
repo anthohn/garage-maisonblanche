@@ -36,8 +36,8 @@ export default function Header() {
                                     <Image
                                         src="/logo.png"
                                         alt="Logo Garage Maison-Blanche"
-                                        width={40}
-                                        height={40}
+                                        width={50}
+                                        height={50}
                                         className="object-contain"
                                     />
                                     <Image

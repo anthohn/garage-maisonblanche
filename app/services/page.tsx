@@ -113,7 +113,7 @@ export default function ServicesPage() {
                                 <div className="relative w-full h-56 rounded-lg overflow-hidden bg-linear-to-br from-blue-100 to-blue-200">
                                     <Image
                                         src="/team/Anthony L.JPG"
-                                        alt="Anthony Legrand - Responsable qualité"
+                                        alt="Anthony Legrand - Mécanicien automobile"
                                         fill
                                         className="object-cover"
                                         quality={95}
@@ -124,8 +124,8 @@ export default function ServicesPage() {
                                 </div>
                             </div>
                             <div className="text-center">
-                                <h3 className="text-xl font-bold text-gray-900 mb-2">Anthony Legrand</h3>
-                                <p className="text-[#303F9F] font-medium text-sm uppercase tracking-wide">Responsable qualité</p>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">Anthony Lanero</h3>
+                                <p className="text-[#303F9F] font-medium text-sm uppercase tracking-wide">Mécanicien automobile</p>
                             </div>
                         </div>
 
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                                 <div className="relative w-full h-56 rounded-lg overflow-hidden bg-linear-to-br from-blue-100 to-blue-200">
                                     <Image
                                         src="/team/Quentin Weiss.JPG"
-                                        alt="Quentin Weiss - Responsable qualité"
+                                        alt="Quentin Weiss - Mécanicien automobile"
                                         fill
                                         className="object-cover"
                                         quality={95}
@@ -146,7 +146,7 @@ export default function ServicesPage() {
                             </div>
                             <div className="text-center">
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">Quentin Weiss</h3>
-                                <p className="text-[#303F9F] font-medium text-sm uppercase tracking-wide">Responsable qualité</p>
+                                <p className="text-[#303F9F] font-medium text-sm uppercase tracking-wide">Mécanicien automobile</p>
                             </div>
                         </div>
 

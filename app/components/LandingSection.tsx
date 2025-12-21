@@ -107,7 +107,7 @@ export default function LandingSection() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.7, duration: 1 }}
                     >
-                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">15+</div>
+                        <div className="text-3xl md:text-4xl font-bold mb-1 drop-shadow-md">25</div>
                         <div className="text-sm text-gray-200 uppercase tracking-wider drop-shadow-sm">Années d&apos;Expérience</div>
                     </motion.div>
                 </div>

@@ -188,8 +188,9 @@ export default function ContactPage() {
                                 </svg>
                                 <div>
                                     <p className="font-semibold text-gray-900">Horaires d&apos;ouverture</p>
-                                    <p className="text-gray-600">Du lundi au vendredi : 8h00 - 18h00</p>
-                                    <p className="text-gray-600">Samedi : 8h00 - 12h00</p>
+                                    <p className="text-gray-600">Lundi - Jeudi : 07:30 - 12:00 / 13:30 - 18:00</p>
+                                    <p className="text-gray-600">Vendredi : 07:30 - 12:00 / 13:30 - 17:00</p>
+                                    <p className="text-gray-600">Samedi - Dimanche : Fermé</p>
                                 </div>
                             </div>
 
