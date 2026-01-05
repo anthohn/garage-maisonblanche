@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import HolidayModal from "@/app/components/HolidayModal";
+// import HolidayModal from "@/app/components/HolidayModal";
 import "./globals.css";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -107,7 +107,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Header />
-        <HolidayModal />
+        {/* <HolidayModal /> */}
         {children}
         <Footer />
       </body>
