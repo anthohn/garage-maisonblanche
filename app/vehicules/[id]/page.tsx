@@ -32,7 +32,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
             </div> */}
 
             <div className="max-w-7xl mx-auto px-6 py-8 mt-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
                     {/* Images Section */}
                     <div>
                         {/* Main Image */}
@@ -40,10 +40,8 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                             <CarImage
                                 src={selectedImage || car.images[0]}
                                 alt={`${car.brand} ${car.model}`}
-                                className="h-96 w-full object-cover" // Increased height for better view
-                                fill={false}
-                                width={800}
-                                height={500}
+                                className="w-full aspect-[4/3] object-cover"
+                                fill={true}
                                 priority={true}
                             />
                         </div>
@@ -62,10 +60,8 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                                         <CarImage
                                             src={img}
                                             alt={`${car.brand} ${car.model} vue ${index + 1}`}
-                                            className="h-24 w-full object-cover"
-                                            fill={false}
-                                            width={200}
-                                            height={150}
+                                            className="w-full aspect-[4/3] object-cover"
+                                            fill={true}
                                         />
                                     </div>
                                 ))}
