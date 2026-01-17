@@ -12,7 +12,7 @@ interface Car {
     mileage: number;
     fuelType: string;
     transmission: string;
-    image: string;
+    images: string[];
 }
 
 interface CarCardProps {
@@ -32,7 +32,7 @@ export default function CarCard({ car, priority = false }: CarCardProps) {
                 {/* Car Image */}
                 <div className="relative h-56 bg-gray-200 overflow-hidden">
                     <CarImage
-                        src={car.image}
+                        src={car.images[0]}
                         alt={`${car.brand} ${car.model}`}
                         className="h-56 w-full object-cover"
                         fill={false}
