@@ -40,13 +40,13 @@ export default function Header() {
                                         height={50}
                                         className="object-contain"
                                     />
-                                    <Image
+                                    {/* <Image
                                         src={SantaHat}
                                         alt="Bonnet de Noel"
                                         width={40}
                                         height={40}
                                         className="absolute -top-4 -right-4 rotate-12 drop-shadow-sm pointer-events-none"
-                                    />
+                                    /> */}
                                 </div>
                                 <span className="hidden sm:block">Garage Maison-Blanche</span>
                                 <span className="sm:hidden">Garage Maison-Blanche</span>
