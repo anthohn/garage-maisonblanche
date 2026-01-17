@@ -34,10 +34,9 @@ export default function CarCard({ car, priority = false }: CarCardProps) {
                     <CarImage
                         src={car.images[0]}
                         alt={`${car.brand} ${car.model}`}
-                        className="h-56 w-full object-cover"
-                        fill={false}
-                        width={400}
-                        height={224}
+                        className="h-full w-full object-cover"
+                        fill={true}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority={priority}
                     />
                 </div>

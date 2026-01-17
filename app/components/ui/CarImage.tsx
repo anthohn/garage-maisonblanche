@@ -11,6 +11,7 @@ interface CarImageProps {
     width?: number;
     height?: number;
     priority?: boolean;
+    sizes?: string;
 }
 
 export default function CarImage({
@@ -20,7 +21,8 @@ export default function CarImage({
     fill = false,
     width,
     height,
-    priority = false
+    priority = false,
+    sizes = '100vw'
 }: CarImageProps) {
     const [imageError, setImageError] = useState(false);
     const [imageLoading, setImageLoading] = useState(true);
@@ -70,6 +72,7 @@ export default function CarImage({
                 width={width}
                 height={height}
                 priority={priority}
+                sizes={sizes}
                 onError={handleImageError}
                 onLoad={handleImageLoad}
                 className="object-cover"

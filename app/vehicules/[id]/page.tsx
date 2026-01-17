@@ -43,6 +43,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                                 className="w-full aspect-[4/3] object-cover"
                                 fill={true}
                                 priority={true}
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                         </div>
                         {/* Thumbnails */}
@@ -62,6 +63,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                                             alt={`${car.brand} ${car.model} vue ${index + 1}`}
                                             className="w-full aspect-[4/3] object-cover"
                                             fill={true}
+                                            sizes="(max-width: 1024px) 25vw, 15vw"
                                         />
                                     </div>
                                 ))}
