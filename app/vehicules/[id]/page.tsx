@@ -138,7 +138,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                                     Nous contacter
                                 </ModernButton>
                                 <ModernButton
-                                    href={`tel:+41227560400`}
+                                    href={`tel:+41227560404`}
                                     variant="outlined"
                                     size="md"
                                     className="w-full"
@@ -149,7 +149,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                                         </svg>
                                     }
                                 >
-                                    +41 22 756 04 00
+                                    +41 22 756 04 04
                                 </ModernButton>
                             </div>
 

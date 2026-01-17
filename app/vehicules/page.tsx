@@ -50,7 +50,7 @@ export default function VehiculesPage() {
                                     Nous contacter
                                 </ModernButton>
                                 <ModernButton
-                                    href="tel:+41227560400"
+                                    href="tel:+41227560404"
                                     variant="outlined"
                                     size="md"
                                     showArrow={false}
@@ -60,7 +60,7 @@ export default function VehiculesPage() {
                                         </svg>
                                     }
                                 >
-                                    +41 22 756 04 00
+                                    +41 22 756 04 04
                                 </ModernButton>
                             </div>
                         </div>
