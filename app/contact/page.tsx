@@ -186,11 +186,28 @@ export default function ContactPage() {
                                 <svg className="w-6 h-6 text-[#303F9F] shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                                 </svg>
-                                <div>
-                                    <p className="font-semibold text-gray-900">Horaires d&apos;ouverture</p>
-                                    <p className="text-gray-600">Lundi - Jeudi : 07:30 - 12:00 / 13:30 - 18:00</p>
-                                    <p className="text-gray-600">Vendredi : 07:30 - 12:00 / 13:30 - 17:00</p>
-                                    <p className="text-gray-600">Samedi - Dimanche : Fermé</p>
+                                <div className="w-full">
+                                    <p className="font-semibold text-gray-900 mb-3">Horaires d&apos;ouverture</p>
+                                    <div className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-3 text-gray-600">
+                                        <div className="font-medium self-center">Lun - Jeu</div>
+                                        <div className="text-right leading-tight">
+                                            <div>07:30 - 12:00</div>
+                                            <div>13:30 - 18:00</div>
+                                        </div>
+
+                                        <div className="col-span-2 border-b border-gray-100/50"></div>
+
+                                        <div className="font-medium self-center">Vendredi</div>
+                                        <div className="text-right leading-tight">
+                                            <div>07:30 - 12:00</div>
+                                            <div>13:30 - 17:00</div>
+                                        </div>
+
+                                        <div className="col-span-2 border-b border-gray-100/50"></div>
+
+                                        <div className="font-medium text-gray-400">Sam - Dim</div>
+                                        <div className="text-right text-gray-400 font-medium">Fermé</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -200,8 +217,18 @@ export default function ContactPage() {
                                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                                     </svg>
                                     <div>
-                                        <p className="font-semibold text-gray-900">Téléphone</p>
+                                        <p className="font-semibold text-gray-900">Garage</p>
                                         <a href="tel:+41227560404" className="text-gray-600 hover:text-blue-600 transition-colors">+41 22 756 04 04</a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start space-x-3">
+                                    <svg className="w-6 h-6 text-[#303F9F] shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+                                    </svg>
+                                    <div>
+                                        <p className="font-semibold text-gray-900">Mobile</p>
+                                        <a href="tel:+41793601347" className="text-gray-600 hover:text-blue-600 transition-colors">+41 79 360 13 47</a>
                                     </div>
                                 </div>
 

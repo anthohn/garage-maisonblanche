@@ -128,7 +128,7 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                             </div>
 
                             {/* Contact Buttons */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div className="flex flex-col gap-4 mb-6">
                                 <ModernButton
                                     href={`/contact?subject=Intérêt pour ${car.brand} ${car.model}`}
                                     size="md"
@@ -137,20 +137,36 @@ export default function CarDetailPage({ params }: { params: Promise<{ id: string
                                 >
                                     Nous contacter
                                 </ModernButton>
-                                <ModernButton
-                                    href={`tel:+41227560404`}
-                                    variant="outlined"
-                                    size="md"
-                                    className="w-full"
-                                    showArrow={false}
-                                    icon={
-                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                        </svg>
-                                    }
-                                >
-                                    +41 22 756 04 04
-                                </ModernButton>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    <ModernButton
+                                        href={`tel:+41227560404`}
+                                        variant="outlined"
+                                        size="md"
+                                        className="w-full justify-center !px-2 !text-sm whitespace-nowrap"
+                                        showArrow={false}
+                                        icon={
+                                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                            </svg>
+                                        }
+                                    >
+                                        Garage : +41 22 756 04 04
+                                    </ModernButton>
+                                    <ModernButton
+                                        href={`tel:+41793601347`}
+                                        variant="outlined"
+                                        size="md"
+                                        className="w-full justify-center !px-2 !text-sm whitespace-nowrap"
+                                        showArrow={false}
+                                        icon={
+                                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" />
+                                            </svg>
+                                        }
+                                    >
+                                        Mobile : +41 79 360 13 47
+                                    </ModernButton>
+                                </div>
                             </div>
 
                             {/* Financing Info */}
