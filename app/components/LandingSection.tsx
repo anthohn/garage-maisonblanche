@@ -1,17 +1,17 @@
 'use client'
 
 import Image from "next/image";
-import Background from '@/public/photoGarage-hiver3.png'
+import Background from '@/public/photoGarage.png'
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
-import SnowEffect from "@/app/components/ui/SnowEffect";
+// import SnowEffect from "@/app/components/ui/SnowEffect";
 
 import ModernButton from "@/app/components/ui/ModernButton";
 
 export default function LandingSection() {
     return (
         <section className="relative h-screen w-full overflow-hidden font-sans">
-            <SnowEffect />
+            {/* <SnowEffect /> */}
             {/* Background Image with Gradient Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -27,7 +27,7 @@ export default function LandingSection() {
                 <div className="absolute inset-0 bg-linear-to-r from-black/50 via-transparent to-transparent" />
                 {/* <div className="absolute inset-0 bg-linear-to-t from-blue-900/50 via-transparent to-transparent" /> */}
             </div>
-            <SnowEffect />
+            {/* <SnowEffect /> */}
 
             {/* Main Content Container */}
             <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center">
