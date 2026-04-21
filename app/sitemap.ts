@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { carsData } from '@/lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    return [
+    const baseRoutes: MetadataRoute.Sitemap = [
         {
             url: 'https://garage-maisonblanche.ch',
             lastModified: new Date(),
@@ -26,5 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'yearly',
             priority: 0.7,
         },
-    ]
+    ];
+
+    const vehicleRoutes: MetadataRoute.Sitemap = carsData.map((car) => ({
+        url: `https://garage-maisonblanche.ch/vehicules/${car.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    }));
+
+    return [...baseRoutes, ...vehicleRoutes];
 }

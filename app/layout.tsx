@@ -57,7 +57,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "Garage Maison-Blanche SA",
-  "image": "https://garage-maisonblanche.ch/logo.png",
+  "image": "https://garage-maisonblanche.ch/photoGarage.jpg",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://garage-maisonblanche.ch/logo.png"
+  },
   "@id": "https://garage-maisonblanche.ch",
   "url": "https://garage-maisonblanche.ch",
   "telephone": "+41 22 756 04 04",
@@ -73,6 +77,9 @@ const jsonLd = {
     "latitude": 46.138,
     "longitude": 5.968
   },
+  "areaServed": [
+    "Chancy", "Avully", "Cartigny", "Soral", "Laconnex", "Bernex", "Aire-la-Ville", "Genève"
+  ],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -89,9 +96,15 @@ const jsonLd = {
   ],
   "priceRange": "$$",
   "sameAs": [
-    "https://www.facebook.com",
-    "https://www.linkedin.com"
-  ]
+    "https://www.facebook.com/profile.php?id=100064107662482",
+    "https://www.instagram.com/garage_maisonblanche"
+  ],
+  "department": {
+    "@type": "GasStation",
+    "name": "Station Maison-Blanche",
+    "url": "https://station-maisonblanche.ch",
+    "telephone": "+41 22 756 15 22"
+  }
 };
 
 export default function RootLayout({

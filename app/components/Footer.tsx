@@ -1,16 +1,16 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock, Facebook, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Fuel } from 'lucide-react';
 
 export default function Footer() {
     return (
         <footer className="bg-linear-to-b from-gray-50 to-blue-600/30 border-t border-gray-200">
             <div className="max-w-7xl mx-auto px-6 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-6">
 
                     {/* 1. Brand & Info */}
                     <div className="space-y-6">
                         <div>
-                            <h2 className="text-2xl font-bold tracking-tight">Garage Maison-Blanche</h2>
+                            <div className="text-2xl font-bold tracking-tight text-gray-900">Garage Maison-Blanche</div>
                             <span className="text-blue-600 text-sm font-semibold uppercase tracking-wider">Membre carXpert</span>
                         </div>
                         <p className="text-gray-600 leading-relaxed text-sm">
@@ -36,18 +36,18 @@ export default function Footer() {
                         </div>
                         {/* Social Links */}
                         <div className="flex gap-4 pt-2">
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-blue-600 hover:shadow-md transition-all border border-gray-100" aria-label="Facebook">
+                            <a href="https://www.facebook.com/profile.php?id=100064107662482" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-blue-600 hover:shadow-md transition-all border border-gray-100" aria-label="Facebook">
                                 <Facebook size={20} />
                             </a>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-blue-700 hover:shadow-md transition-all border border-gray-100" aria-label="LinkedIn">
-                                <Linkedin size={20} />
+                            <a href="https://www.instagram.com/garage_maisonblanche" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-pink-600 hover:shadow-md transition-all border border-gray-100" aria-label="Instagram">
+                                <Instagram size={20} />
                             </a>
                         </div>
                     </div>
 
                     {/* 2. Contact */}
                     <div className="space-y-6">
-                        <h3 className="text-lg font-bold">Nous Contacter</h3>
+                        <div className="text-lg font-bold text-gray-900">Nous Contacter</div>
 
                         <div className="space-y-4">
                             <div className="flex items-start gap-4">
@@ -74,10 +74,10 @@ export default function Footer() {
 
                     {/* 3. Horaires Atelier */}
                     <div className="space-y-6">
-                        <h3 className="text-lg font-bold flex items-center gap-2">
+                        <div className="text-lg font-bold flex items-center gap-2 text-gray-900">
                             <Clock size={20} className="text-blue-600" />
                             Horaires Atelier
-                        </h3>
+                        </div>
                         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                             <div className="space-y-3 text-sm">
                                 <div className="flex justify-between border-b border-gray-100 pb-2">
@@ -93,6 +93,32 @@ export default function Footer() {
                                     <span className="text-gray-900 font-medium">Fermé</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* 4. Station Services */}
+                    <div className="space-y-6">
+                        <div className="text-lg font-bold flex items-center gap-2 text-gray-900">
+                            <Fuel size={20} className="text-blue-600" />
+                            Station & Shop
+                        </div>
+                        <p className="text-gray-600 leading-relaxed text-sm">
+                            Découvrez notre station-service et shop partenaire, juste à côté du garage.
+                        </p>
+                        <div className="space-y-3 text-sm">
+                            <a href="https://station-maisonblanche.ch" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                                Visiter le site web
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            </a>
+                        </div>
+                        {/* Social Links Station */}
+                        <div className="flex gap-4 pt-2">
+                            <a href="https://www.facebook.com/profile.php?id=61580606409294" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-blue-600 hover:shadow-md transition-all border border-gray-100" aria-label="Facebook Station">
+                                <Facebook size={20} />
+                            </a>
+                            <a href="https://www.instagram.com/station_maisonblanche" target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full text-gray-400 hover:text-pink-600 hover:shadow-md transition-all border border-gray-100" aria-label="Instagram Station">
+                                <Instagram size={20} />
+                            </a>
                         </div>
                     </div>
                 </div>
