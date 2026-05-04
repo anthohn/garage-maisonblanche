@@ -73,5 +73,27 @@ export const carsData: Car[] = [
             seats: 2,
             color: 'Vert' // Souvent vert pour les MG, à confirmer ou changer
         }
+    },
+    {
+        id: 'opel-speedster',
+        brand: 'Opel',
+        model: 'Speedster',
+        year: 2001,
+        price: 17100,
+        mileage: 31700,
+        fuelType: 'Essence',
+        transmission: 'Manuel',
+        images: ['/cars/opel-speedster/1.jpg', '/cars/opel-speedster/2.jpg'],
+        description: 'Magnifique Opel Speedster 2.2 avec seulement 31 700 km certifiés. Véhicule expertisé en mai 2026.',
+        // features: ['Expertisée mai 2026', 'Intérieur cuir noir', 'Soft-top noir', 'Jantes alliage', 'Vitres manuelles'],
+        specifications: {
+            engine: '2.2 16V',
+            power: '147 ch',
+            consumption: '8.5 L/100km',
+            co2: '206 g/km',
+            doors: 2,
+            seats: 2,
+            color: 'Rouge'
+        }
     }
 ];
