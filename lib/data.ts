@@ -79,7 +79,7 @@ export const carsData: Car[] = [
         brand: 'Opel',
         model: 'Speedster',
         year: 2001,
-        price: 17100,
+        price: 17700,
         mileage: 31700,
         fuelType: 'Essence',
         transmission: 'Manuel',
