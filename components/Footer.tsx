@@ -96,6 +96,7 @@ export default function Footer() {
                     <a href="#myPage" title="To Top"><span className="glyphicon glyphicon-chevron-up"></span></a>
                     <p style={{ fontSize: '14px' }}>Copyright &copy; <span id="ydate">{new Date().getFullYear()}</span> - Garage Maison-Blanche</p>
                     <p className="copyright" style={{ color: '#757575' }}>Designed by <img src="/img/bni_man_grey.gif" style={{ width: '10px', verticalAlign: 'text-bottom', display: 'inline-block' }} alt="logo bni" /><span style={{ fontFamily: 'PT Serif' }}>&nbsp;bni</span> - <a href="https://www.bni.ch" target="_blank"><span style={{ fontFamily: 'Palanquin', letterSpacing: '-0.7px' }}>Business Network Integration</span></a></p>
+                    <p style={{ fontSize: '12px', color: '#757575', marginTop: '5px' }}>Réalisé par : <a href="https://anthony-hohn.ch" target="_blank" style={{ color: '#757575', textDecoration: 'none' }}>Anthony Höhn</a></p>
                 </div>
             </footer>
         </>

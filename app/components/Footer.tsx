@@ -125,7 +125,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                    <p>&copy; {new Date().getFullYear()} Garage Maison-Blanche SA</p>
+                    <p>&copy; {new Date().getFullYear()} Garage Maison-Blanche SA • Réalisé par : <a href="https://anthony-hohn.ch" target="_blank" className="hover:text-blue-600 transition-colors">Anthony Höhn</a></p>
                     <div className="flex gap-6">
                         <Link href="#" className="hover:text-blue-600 transition-colors">Mentions Légales</Link>
                         <Link href="#" className="hover:text-blue-600 transition-colors">Confidentialité</Link>
