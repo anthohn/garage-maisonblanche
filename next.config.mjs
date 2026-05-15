@@ -30,6 +30,11 @@ const nextConfig = {
                 permanent: true,
             },
             {
+                source: '/garage.html',
+                destination: '/services',
+                permanent: true,
+            },
+            {
                 source: '/station',
                 destination: '/services',
                 permanent: true,
