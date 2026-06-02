@@ -26,6 +26,7 @@ export interface Car {
         doors: number;
         seats: number;
         color: string;
+        registration?: string;
     };
 }
 
@@ -62,16 +63,17 @@ export const carsData: Car[] = [
         transmission: 'Manuel',
         images: ['/cars/mg-mgf/1.jpg', '/cars/mg-mgf/2.jpg', '/cars/mg-mgf/3.jpg', '/cars/mg-mgf/4.jpg', '/cars/mg-mgf/5.jpg', '/cars/mg-mgf/6.jpg', '/cars/mg-mgf/7.jpg', '/cars/mg-mgf/8.jpg'], // Tableau d'images (dupliqué pour test)
 
-        description: 'MG MGF 1.8i Cabriolet en très bon état. Expertise du jour (11.02.2025). Service effectué, courroie de distribution remplacée. Suspension hydragas neuve. Hardtop inclus.',
-        features: ['ABS', 'Sièges en cuir', 'Jantes en alliage léger', 'Vitres électriques', 'Climatisation', 'Hardtop', 'Verrouillage central'],
+        description: 'Magnifique MG MGF 1.8i Cabriolet en très bon état. Expertise du jour (02.2025). Entièrement révisée avec courroie de distribution remplacée, capote neuve, pneus neufs et suspension hydragas neuve. Vendue avec son certificat de conformité européen (COC Europe).',
+        features: ['ABS', 'Climatisation', 'Capote neuve', 'Pneus neufs', 'Hardtop inclus', 'Suspension neuve', 'Service à jour', 'Sièges en cuir', 'Jantes en alliage léger', 'Vitres électriques', 'Verrouillage central', 'Certificat de conformité européen (COC)'],
         specifications: {
-            engine: '1.8i',
-            power: '120 ch',
+            engine: '1.8i (1800 ccm)',
+            power: '120 ch (88 kW)',
             consumption: '7.4 L/100km',
             co2: '178 g/km', // Estimation
             doors: 2,
             seats: 2,
-            color: 'Vert' // Souvent vert pour les MG, à confirmer ou changer
+            color: 'Vert',
+            registration: '08.1998'
         }
     },
     {

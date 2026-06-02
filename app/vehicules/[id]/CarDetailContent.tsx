@@ -107,6 +107,33 @@ export default function CarDetailContent({ car }: { car: Car }) {
                                 <p className="text-gray-600 leading-relaxed">{car.description}</p>
                             </div>
 
+                            {/* Encart Partenaire Pneus-Online */}
+                            {car.features?.includes('Pneus neufs') && (
+                                <div className="mb-6 p-5 bg-gray-50 rounded-lg flex items-center justify-between gap-4">
+                                    <div className="flex-1">
+                                        <h4 className="text-sm font-bold text-[#303F9F] mb-1">
+                                            Pneus Neufs & Entretien
+                                        </h4>
+                                        <p className="text-xs text-gray-600 leading-relaxed">
+                                            Ce véhicule est équipé de pneus neufs installés pour la vente, en collaboration avec notre partenaire officiel.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="https://www.pneus-online-suisse.ch"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-shrink-0 bg-white p-2.5 rounded-lg border border-gray-150 transition-all duration-300 hover:scale-[1.05]"
+                                    >
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src="https://cdn-img1.pneus-online.com/pol/logo_fr.png"
+                                            alt="Pneus Online Suisse"
+                                            className="h-8 md:h-9 object-contain"
+                                        />
+                                    </a>
+                                </div>
+                            )}
+
                             {/* Contact Buttons */}
                             <div className="flex flex-col gap-4 mb-6">
                                 <ModernButton
@@ -182,6 +209,18 @@ export default function CarDetailContent({ car }: { car: Car }) {
                                     <h3 className="font-semibold text-gray-900 mb-2">Places</h3>
                                     <p className="text-gray-600">{car.specifications.seats} places</p>
                                 </div>
+                                {car.specifications.registration && (
+                                    <div>
+                                        <h3 className="font-semibold text-gray-900 mb-2">Mise en circulation</h3>
+                                        <p className="text-gray-600">{car.specifications.registration}</p>
+                                    </div>
+                                )}
+                                {car.features?.includes('Certificat de conformité européen (COC)') && (
+                                    <div>
+                                        <h3 className="font-semibold text-gray-900 mb-2">Certificat de conformité</h3>
+                                        <p className="text-gray-600">COC Europe disponible</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

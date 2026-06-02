@@ -35,6 +35,13 @@ export default function LogoBandSection() {
             url: "https://www.shell.ch"
         },
         {
+            name: "Pneus Online Suisse",
+            src: "/partners/pneus-online.png",
+            alt: "Pneus Online Suisse",
+            description: "Achat de pneus auto et moto en ligne à prix avantageux",
+            url: "https://www.pneus-online-suisse.ch"
+        },
+        {
             name: "Formation Pro",
             src: "/partners/formation-pro.png",
             alt: "Formation Professionnelle",
