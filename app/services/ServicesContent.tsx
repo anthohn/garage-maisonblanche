@@ -60,31 +60,35 @@ export default function ServicesContent() {
             </div>
 
             {/* 2. OTHER SERVICES (Compact List) */}
-            <div className="py-12 bg-gray-50">
-                <div className="max-w-6xl mx-auto px-6">
-                    <section className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tous nos services</h2>
-                            <p className="text-gray-500">Une expertise complète pour chaque besoin de votre véhicule</p>
-                        </div>
+            <div className="py-16 bg-gray-50 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <div className="text-center mb-16">
+                        <Badge className="mb-6">
+                            Autres Prestations
+                        </Badge>
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Tous nos services</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                            Une expertise complète pour répondre à chaque besoin spécifique de votre véhicule, avec la même exigence de qualité.
+                        </p>
+                    </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                            {otherServices.map((service, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    className="flex items-center p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors group cursor-default"
-                                >
-                                    <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-500 group-hover:text-[#303F9F] group-hover:scale-110 transition-all mr-4 shrink-0">
-                                        <service.icon className="w-5 h-5" />
-                                    </div>
-                                    <span className="font-medium text-gray-700 group-hover:text-gray-900">{service.title}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </section>
+                    <div className="flex flex-wrap justify-center gap-6">
+                        {otherServices.map((service, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.05 }}
+                                className="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] bg-white rounded-2xl p-5 shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 transform hover:-translate-y-1 flex items-center cursor-default"
+                            >
+                                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-[#303F9F] transition-colors duration-300 mr-4 shrink-0">
+                                    <service.icon className="w-6 h-6" />
+                                </div>
+                                <span className="font-semibold text-gray-800 transition-colors">{service.title}</span>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
