@@ -76,6 +76,7 @@ export const carsData: Car[] = [
             registration: '08.1998'
         }
     },
+    /*
     {
         id: 'opel-speedster',
         brand: 'Opel',
@@ -98,4 +99,5 @@ export const carsData: Car[] = [
             color: 'Rouge'
         }
     }
+    */
 ];

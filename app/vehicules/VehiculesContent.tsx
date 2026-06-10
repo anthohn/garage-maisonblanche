@@ -38,7 +38,7 @@ export default function VehiculesContent() {
                         </div>
 
                         {/* Contact Section */}
-                        <div className="text-center mt-16 bg-white rounded-xl p-8 shadow-lg">
+                        <div className="text-center mt-16 py-8">
                             <h2 className="text-2xl font-bold text-gray-900 mb-4">Intéressé par un véhicule ?</h2>
                             <p className="text-gray-600 mb-6">Contactez-nous pour plus d&apos;informations ou pour organiser un essai</p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
