@@ -28,13 +28,14 @@ export default function CarForSaleSection() {
                 {/* Cars Grid avec design premium */}
                 {featuredCars.length > 0 ? (
                     <>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <div className="flex flex-wrap justify-center gap-8 mb-12">
                             {featuredCars.map((car, index) => (
-                                <CarCard
-                                    key={car.id}
-                                    car={car}
-                                    priority={index < 2}
-                                />
+                                <div key={car.id} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm">
+                                    <CarCard
+                                        car={car}
+                                        priority={index < 2}
+                                    />
+                                </div>
                             ))}
                         </div>
 
