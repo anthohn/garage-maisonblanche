@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     description: "Mentions légales du site du Garage Maison-Blanche SA, situé à Chancy (Genève).",
     robots: {
         index: false,
-        follow: false,
+        follow: true,
     },
 };
 
