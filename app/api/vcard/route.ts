@@ -22,7 +22,6 @@ export async function GET() {
             'ORG:Garage Maison-Blanche SA',
             'X-ABShowAs:COMPANY',
             'TEL;TYPE=WORK,VOICE;TYPE=PREF:+41227560404',
-            'TEL;TYPE=CELL:+41793601347',
             'EMAIL;TYPE=WORK,INTERNET:atelier@garage-maisonblanche.ch',
             'URL:https://garage-maisonblanche.ch',
             'X-SOCIALPROFILE;type=facebook:https://www.facebook.com/profile.php?id=100064107662482',

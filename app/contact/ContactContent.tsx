@@ -195,7 +195,7 @@ export default function ContactContent() {
                         <div>
                             <h2 className="text-2xl font-bold text-gray-900 mb-2">Ajouter aux contacts</h2>
                             <p className="text-gray-600 text-sm max-w-xl">
-                                Enregistrez en 1 clic le Garage Maison-Blanche dans le carnet d&apos;adresses de votre smartphone (téléphone atelier, mobile, e-mail, adresse GPS &amp; horaires).
+                                Enregistrez en 1 clic le Garage Maison-Blanche dans le carnet d&apos;adresses de votre smartphone (téléphone atelier, e-mail, adresse GPS &amp; horaires).
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
