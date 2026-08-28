@@ -1,9 +1,12 @@
 'use client'
 import { useState } from 'react';
+import { UserPlus, QrCode } from 'lucide-react';
 import Badge from '@/app/components/ui/Badge';
 import ModernButton from '@/app/components/ui/ModernButton';
+import QrCodeModal from '@/app/components/QrCodeModal';
 
 export default function ContactContent() {
+    const [isQrOpen, setIsQrOpen] = useState<boolean>(false);
     const [formData, setFormData] = useState({
         nom: '',
         prenom: '',
@@ -13,6 +16,25 @@ export default function ContactContent() {
     });
 
     const [newsletterEmail, setNewsletterEmail] = useState('');
+
+    const handleAddContact = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (typeof window !== 'undefined' && navigator.canShare) {
+            try {
+                const res = await fetch('/api/vcard');
+                const vcardText = await res.text();
+                const file = new File([vcardText], 'garage-maisonblanche.vcf', { type: 'text/vcard' });
+                if (navigator.canShare({ files: [file] })) {
+                    e.preventDefault();
+                    await navigator.share({
+                        files: [file],
+                        title: 'Garage Maison-Blanche SA',
+                    });
+                }
+            } catch {
+                // Fallback direct navigation
+            }
+        }
+    };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -168,6 +190,33 @@ export default function ContactContent() {
 
                 {/* Map Section */}
                 <div className="mb-16">
+                    {/* Carte Ajouter aux contacts */}
+                    <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-8 my-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div>
+                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Ajouter aux contacts</h2>
+                            <p className="text-gray-600 text-sm max-w-xl">
+                                Enregistrez en 1 clic le Garage Maison-Blanche dans le carnet d&apos;adresses de votre smartphone (téléphone atelier, mobile, e-mail, adresse GPS &amp; horaires).
+                            </p>
+                        </div>
+                        <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
+                            <a
+                                href="/api/vcard"
+                                onClick={handleAddContact}
+                                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#303F9F] hover:bg-[#283593] active:scale-95 text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-md shadow-blue-900/20 transition-all cursor-pointer"
+                            >
+                                <UserPlus size={18} />
+                                <span>Ajouter aux contacts</span>
+                            </a>
+                            <button
+                                onClick={() => setIsQrOpen(true)}
+                                className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-sm flex items-center justify-center gap-2 transition-colors border border-gray-200 cursor-pointer"
+                            >
+                                <QrCode size={18} className="text-[#303F9F]" />
+                                <span>Afficher le QR Code</span>
+                            </button>
+                        </div>
+                    </div>
+
                     {/* Contact Info */}
                     <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-8 my-8">
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Venez nous rendre visite</h2>
@@ -265,6 +314,9 @@ export default function ContactContent() {
                     </div>
                 </div>
             </div>
+
+            {/* Modal QR Code */}
+            <QrCodeModal isOpen={isQrOpen} onClose={() => setIsQrOpen(false)} />
         </div>
     );
 }

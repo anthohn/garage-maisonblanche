@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import MobileContactBar from "@/app/components/MobileContactBar";
 // import HolidayModal from "@/app/components/HolidayModal";
 import "./globals.css";
 
@@ -123,6 +124,7 @@ export default function RootLayout({
         {/* <HolidayModal /> */}
         {children}
         <Footer />
+        <MobileContactBar />
       </body>
     </html>
   );
