@@ -212,7 +212,7 @@ export default function ContactContent() {
                                 className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-sm flex items-center justify-center gap-2 transition-colors border border-gray-200 cursor-pointer"
                             >
                                 <QrCode size={18} className="text-[#303F9F]" />
-                                <span>Afficher le QR Code</span>
+                                <span>Scanner avec votre téléphone</span>
                             </button>
                         </div>
                     </div>
